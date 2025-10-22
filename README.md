@@ -1,6 +1,10 @@
-# Quick3 for WooCommerce
+# PCKasse for WooCommerce
 
-The official website for [Quick3 for WooCommerce](https://quick3-for-woocommerce.no).
+> Staring of as a copy of quick3-for-woocommerce.no. Then gradually changed to
+> be it's own thing. For now this is good enough, since it's in the early days
+> and we just want to get v1 out the door.
+
+The official website for [PCKasse for WooCommerce](https://pckasse-for-woocommerce.no).
 
 To be even more transparent we have decided to make the source code of our
 website public. This gives the curious reader the possibility to look into how
@@ -8,9 +12,14 @@ it's made. Life is just a bit more fun when you are open and transparent 🕺
 
 ## About
 
-Quick3 for WooCommerce is a WordPress plugin that synchronizes products, prices,
-and inventory between Quick3 ERP and WooCommerce. Built by [Iniva AS](https://iniva.no),
-a small Norwegian company working on building products with and for clients.
+PCKasse for WooCommerce is a sync that stands between WooCommerce and PCKasse.
+This makes it possible for you to have your own WooCommerce store (not the multisite
+solution from PCKasse) and have it synchronized with your PCKasse.
+
+We already have three clients using this system, and it's working really well!
+
+Built by [Iniva AS](https://iniva.no), a small Norwegian company working on
+building products with and for clients.
 
 ## Copyright
 
@@ -22,9 +31,6 @@ You may view the code, but you may NOT:
 - Copy, modify, or distribute this code
 - Use this code in your own projects
 - Create derivative works
-
-**Note:** The Quick3 for WooCommerce WordPress plugin itself is licensed under GPL v2 or later,
-as required by WordPress. This copyright notice applies only to the website code and content.
 
 For licensing inquiries, contact: hello@iniva.no
 
@@ -69,8 +75,8 @@ For licensing inquiries, contact: hello@iniva.no
 
 ```bash
 # Clone the repository
-git clone https://github.com/iniva/quick3-for-woocommerce.no.git
-cd quick3-for-woocommerce.no
+git clone https://github.com/iniva/pckasse-for-woocommerce.no.git
+cd pckasse-for-woocommerce.no
 
 # Install dependencies
 npm install
@@ -140,8 +146,8 @@ Please note that due to the copyright restrictions above, we cannot accept pull 
 
 ## Contact
 
-- Website: [quick3-for-woocommerce.no](https://quick3-for-woocommerce.no)
-- Plugin Repository: [github.com/iniva/quick3-for-woocommerce](https://github.com/iniva/quick3-for-woocommerce)
+- Website: [pckasse-for-woocommerce.no](https://pckasse-for-woocommerce.no)
+- Repository: [github.com/iniva/pckasse-for-woocommerce.no](https://github.com/iniva/pckasse-for-woocommerce.no)
 - Company: [iniva.no](https://iniva.no)
 - Email: hello@iniva.no
 

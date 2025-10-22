@@ -163,8 +163,8 @@ The blog is fully responsive:
 
 ## 🔗 URLs
 
-- Blog listing: `https://quick3-for-woocommerce.no/no/blogg`
-- Individual post: `https://quick3-for-woocommerce.no/no/blogg/[slug]`
+- Blog listing: `https://pckasse-for-woocommerce.no/no/blogg`
+- Individual post: `https://pckasse-for-woocommerce.no/no/blogg/[slug]`
 
 The slug is automatically generated from the filename (without `.md`).
 

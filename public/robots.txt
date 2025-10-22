@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://quick3-for-woocommerce.no/sitemap-index.xml
+Sitemap: https://pckasse-for-woocommerce.no/sitemap-index.xml

@@ -1,13 +1,26 @@
-- [/] Make it more obvious that this is a wp plugin
-- [ ] More focus on support
-- [ ] Make videos showing the integration. Should have quick3 test env for demo tho
+## V1
 
-## Content ideas
+- [x] Copy over the quick3-for-woocommerce.no repo, so I can satart with that as a base.
+- [/] remove the multi language stuff. Keep only norwegian.
+- [ ] Start replacing the content to fit PCKasse for WooCommerce
 
-- [ ] Rank Math and Yoast compatible?
-- [ ] Add bento grid on the frontpage.
-- [ ] Make features displayed nicer. Maybe make it more concrete for the user.
-  - [ ] Product sync (show image and text)
-  - [ ] Warehouse sync (show multi location image)
-  - [ ] Order sync (show image and text)
-  - [ ] SEO (show image. Title, description, keywords)
+- [ ] Figure out how to sell before I have self-service working. (kick ass contact form?)
+
+## Figure out pricing
+
+- Tre nivåer
+- Gratis oppstart
+- Support på telefon og e-post
+
+## Launch
+
+- [ ] Google Search console
+- [ ] Plauseable
+- [ ] Google Tag Manager
+- [ ] Google Analytics
+- [ ] Sette opp conversion tracking
+- [ ] google Ads
+
+## V2
+
+- [ ] Figure out how to get self-signup working with todays api server.
