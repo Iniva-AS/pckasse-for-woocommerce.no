@@ -1,10 +1,7 @@
 ---
-import { type Locale } from '../i18n/utils';
-
 interface Props {
 	title: string;
 	description: string;
-	locale?: Locale;
 	type?: 'website' | 'article';
 	image?: string;
 	noindex?: boolean;
@@ -14,7 +11,6 @@ interface Props {
 const {
 	title,
 	description,
-	locale = 'no',
 	type = 'website',
 	image = '/og-image.png',
 	noindex = false,
@@ -25,9 +21,8 @@ const siteUrl = 'https://quick3-for-woocommerce.no';
 const currentUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
 const ogImageUrl = new URL(image, siteUrl).href;
 
-// Map locale to OG locale format
-const ogLocale = locale === 'no' ? 'nb_NO' : 'en_GB';
-const ogLocaleAlternate = locale === 'no' ? 'en_GB' : 'nb_NO';
+// Hardcoded Norwegian locale
+const ogLocale = 'nb_NO';
 ---
 
 <!-- Primary Meta Tags -->
@@ -46,7 +41,6 @@ const ogLocaleAlternate = locale === 'no' ? 'en_GB' : 'nb_NO';
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImageUrl} />
 <meta property="og:locale" content={ogLocale} />
-<meta property="og:locale:alternate" content={ogLocaleAlternate} />
 <meta property="og:site_name" content="Quick3 for WooCommerce" />
 
 <!-- Twitter -->
