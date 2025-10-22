@@ -1,6 +1,6 @@
 ---
 title: "Hva koster det å koble Quick3 til WooCommerce?"
-description: "Komplett prisguide for Quick3 for WooCommerce. Sammenlign Free, Business og Enterprise-planene. Finn riktig løsning for din nettbutikk."
+description: "Komplett prisguide for PCKasse for WooCommerce. Sammenlign Free, Business og Enterprise-planene. Finn riktig løsning for din nettbutikk."
 pubDate: 2025-10-16
 image: "/blog/calculator.jpg"
 imageAlt: "Photo by Kelly Sikkema on Unsplash"
@@ -13,7 +13,7 @@ draft: false
 Når du vurderer å flytte fra Quick3 sin innebygde nettbutikk til WooCommerce, lurer du sikkert på hva det koster.
 Svaret er: Det kommer ann på, men kanskje mindre enn du tror.
 
-## Quick3 for WooCommerce: Integrasjonskostnaden
+## PCKasse for WooCommerce: Integrasjonskostnaden
 
 Det vi leverer er integrasjonen mellom Quick3 og WooCommerce.
 Vi har strukturert våre priser og hva som er inkludert så det skal passe små og

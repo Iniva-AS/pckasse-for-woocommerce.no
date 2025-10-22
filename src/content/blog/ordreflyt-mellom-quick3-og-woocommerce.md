@@ -3,7 +3,7 @@ title: "Ordreflyt mellom Quick3 og WooCommerce"
 description: "Få kontroll på hvordan ordre synkroniseres mellom Quick3 og WooCommerce"
 pubDate: 2025-10-15
 image: "/blog/order-flow.png"
-imageAlt: "Skjermbilde av Quick3 for WooCommerce installasjonsprosess"
+imageAlt: "Skjermbilde av PCKasse for WooCommerce installasjonsprosess"
 authorName: "Ole Herland"
 authorRole: "CEO, Iniva AS"
 authorImage: "/authors/ole-herland.jpg"
@@ -61,7 +61,7 @@ Så lenge du er klar over det, er det sjelden et problem i praksis.
 
 ## Starter du med integrasjonen?
 
-Quick3 for WooCommerce leverer den automatiske ordreflyten mellom systemene.
+PCKasse for WooCommerce leverer den automatiske ordreflyten mellom systemene.
 Vi har priser som passer både små og store butikker – og du kan teste gratis med opptil 50 produkter.
 
 Trenger du hjelp med oppsett eller implementasjon? Vi samarbeider tett med [veniro.no](https://veniro.no),

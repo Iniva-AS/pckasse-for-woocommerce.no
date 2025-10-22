@@ -32,7 +32,7 @@ Quick3 sin innebygde nettbutikk fungerer fint, men har klare begrensninger. Mang
 - Verdens mest brukte e-handelsplattform (5+ millioner butikker)
 - Tusenvis av plugins og temaer
 - Full designfrihet
-- Med Quick3 for WooCommerce får du automatisk synkronisering
+- Med PCKasse for WooCommerce får du automatisk synkronisering
 
 Du får beste av begge verdener.
 
@@ -98,7 +98,7 @@ WooCommerce skalerer fra 10 til 100 000+ produkter uten problemer. Du får:
 
 - CDN for lynrask lasting
 - Caching og optimalisering
-- Quick3 for WooCommerce Enterprise med ubegrensede produkter
+- PCKasse for WooCommerce Enterprise med ubegrensede produkter
 
 ## Full datakontroll
 
@@ -126,7 +126,7 @@ Velg WooCommerce hvis du:
 ## Kom i gang på 5 steg
 
 1. Sett opp WordPress og WooCommerce
-2. Installer Quick3 for WooCommerce-pluginen
+2. Installer PCKasse for WooCommerce-pluginen
 3. Koble til Quick3 via API
 4. Velg et tema
 5. Konfigurer betalings- og fraktløsninger

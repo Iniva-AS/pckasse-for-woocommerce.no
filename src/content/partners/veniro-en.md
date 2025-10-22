@@ -3,7 +3,7 @@ title: "Veniro Media Solutions AS"
 slug: "veniro"
 logo: "/partners/veniro/logo.svg"
 profileImage: "/partners/veniro/benjamin-lind-enger.jpeg"
-description: "Your support partner along the way - experienced web development and e-commerce agency helping businesses implement Quick3 for WooCommerce."
+description: "Your support partner along the way - experienced web development and e-commerce agency helping businesses implement PCKasse for WooCommerce."
 website: "https://www.veniro.no"
 email: "hello@veniro.no"
 phone: "+47 906 95 555"
@@ -12,7 +12,7 @@ services:
   - "Web Development & Design"
   - "E-commerce Solutions"
   - "Design & Identity"
-  - "Quick3 for WooCommerce Implementation"
+  - "PCKasse for WooCommerce Implementation"
   - "Hosting & Server Solutions"
   - "SEO & Digital Marketing"
 featured: true
@@ -33,11 +33,11 @@ Did you know that you can both increase sales and traffic by having a nice websi
 
 ### E-commerce Solutions
 
-We develop modern and efficient e-commerce solutions that integrate seamlessly with your business systems. Our expertise in Quick3 for WooCommerce ensures smooth synchronization between your ERP and online store.
+We develop modern and efficient e-commerce solutions that integrate seamlessly with your business systems. Our expertise in PCKasse for WooCommerce ensures smooth synchronization between your ERP and online store.
 
-### Quick3 for WooCommerce Implementation
+### PCKasse for WooCommerce Implementation
 
-As an experienced implementation partner, we help businesses get started with Quick3 for WooCommerce. From initial setup to customization and ongoing support.
+As an experienced implementation partner, we help businesses get started with PCKasse for WooCommerce. From initial setup to customization and ongoing support.
 
 ### Design & Identity
 
