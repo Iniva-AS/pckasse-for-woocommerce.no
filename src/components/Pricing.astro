@@ -1,39 +1,45 @@
 ---
-import { useTranslations, type Locale } from '../i18n/utils';
-
-interface Props {
-	locale: Locale;
-}
-
-const { locale } = Astro.props;
-const t = useTranslations(locale);
-
 const tiers = [
 	{
-		name: t.pricing.tiers.free.name,
+		name: "Free",
 		id: 'tier-free',
 		href: 'https://checkout.freemius.com/plugin/20957/plan/34943/',
 		price: { monthly: '$0', annually: '$0' },
-		description: t.pricing.tiers.free.description,
-		features: t.pricing.tiers.free.features,
+		description: "Kom i gang med grunnleggende synkronisering for små kataloger.",
+		features: [
+			"Ingen support",
+			"50 produkter",
+			"1 dags loggbevaring",
+			"Produktsynkronisering hver time"
+		],
 		featured: false,
 	},
 	{
-		name: t.pricing.tiers.business.name,
+		name: "Business",
 		id: 'tier-business',
 		href: 'https://checkout.freemius.com/plugin/20957/plan/34944/licenses/1/',
 		price: { monthly: '$149.99', annually: '$1,449' },
-		description: t.pricing.tiers.business.description,
-		features: t.pricing.tiers.business.features,
+		description: "For voksende bedrifter med aktiv produktstyring og support.",
+		features: [
+			"E-post support",
+			"10 000 produkter",
+			"30 dagers loggbevaring",
+			"Produktsynkronisering hvert 30. minutt"
+		],
 		featured: true,
 	},
 	{
-		name: t.pricing.tiers.enterprise.name,
+		name: "Enterprise",
 		id: 'tier-enterprise',
 		href: 'https://checkout.freemius.com/plugin/20957/plan/34945/licenses/1/',
 		price: { monthly: '$449', annually: '$4,300' },
-		description: t.pricing.tiers.enterprise.description,
-		features: t.pricing.tiers.enterprise.features,
+		description: "Premium løsning med ubegrenset kapasitet og prioritert support.",
+		features: [
+			"Prioritert e-post support",
+			"Ubegrenset antall produkter",
+			"Ubegrenset loggbevaring",
+			"Produktsynkronisering hvert 15. minutt"
+		],
 		featured: false,
 	},
 ];
@@ -42,16 +48,16 @@ const tiers = [
 <div class="bg-white py-24 sm:py-32">
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto max-w-4xl text-center">
-			<h2 class="text-base/7 font-semibold text-indigo-600">{t.pricing.heading}</h2>
+			<h2 class="text-base/7 font-semibold text-indigo-600">Priser</h2>
 			<p class="mt-2 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
-				{t.pricing.title}
+				Priser
 			</p>
 		</div>
 		<p class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8">
-			{t.pricing.description}
+			Velg en prisplan som passer dine behov. Alle planer inkluderer automatisk synkronisering og pålitelig bakgrunnsprosessering.
 		</p>
 		<div class="mt-16 flex justify-center">
-			<fieldset aria-label={t.pricing.frequency.monthly}>
+			<fieldset aria-label="Månedlig">
 				<div class="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs/5 font-semibold inset-ring inset-ring-gray-200">
 					<label class="group relative rounded-full px-2.5 py-1 has-checked:bg-indigo-600">
 						<input
@@ -61,7 +67,7 @@ const tiers = [
 							type="radio"
 							class="absolute inset-0 appearance-none rounded-full"
 						/>
-						<span class="text-gray-500 group-has-checked:text-white">{t.pricing.frequency.monthly}</span>
+						<span class="text-gray-500 group-has-checked:text-white">Månedlig</span>
 					</label>
 					<label class="group relative rounded-full px-2.5 py-1 has-checked:bg-indigo-600">
 						<input
@@ -70,7 +76,7 @@ const tiers = [
 							type="radio"
 							class="absolute inset-0 appearance-none rounded-full"
 						/>
-						<span class="text-gray-500 group-has-checked:text-white">{t.pricing.frequency.annually}</span>
+						<span class="text-gray-500 group-has-checked:text-white">Årlig</span>
 					</label>
 				</div>
 			</fieldset>
@@ -91,7 +97,7 @@ const tiers = [
 						</h3>
 						{tier.featured && (
 							<p class="rounded-full bg-indigo-600/10 px-2.5 py-1 text-xs/5 font-semibold text-indigo-600">
-								{t.pricing.mostPopular}
+								Mest populær
 							</p>
 						)}
 					</div>
@@ -99,13 +105,13 @@ const tiers = [
 					<p class="tier-price-monthly mt-6 flex items-baseline gap-x-1">
 						<span class="text-4xl font-semibold tracking-tight text-gray-900">{tier.price.monthly}</span>
 						{tier.price.monthly !== '$0' && (
-							<span class="text-sm/6 font-semibold text-gray-600">{t.pricing.perMonth}</span>
+							<span class="text-sm/6 font-semibold text-gray-600">/måned</span>
 						)}
 					</p>
 					<p class="tier-price-annually mt-6 hidden flex items-baseline gap-x-1">
 						<span class="text-4xl font-semibold tracking-tight text-gray-900">{tier.price.annually}</span>
 						{tier.price.annually !== '$0' && (
-							<span class="text-sm/6 font-semibold text-gray-600">{t.pricing.perYear}</span>
+							<span class="text-sm/6 font-semibold text-gray-600">/år</span>
 						)}
 					</p>
 					<a
@@ -120,7 +126,7 @@ const tiers = [
 							tier.featured && 'bg-indigo-600 text-white shadow-xs inset-ring-0 hover:bg-indigo-500'
 						]}
 					>
-						{tier.price.monthly === '$0' ? t.pricing.getFreeStart : t.pricing.choosePlan}
+						{tier.price.monthly === '$0' ? 'Kom i gang gratis' : 'Velg plan'}
 					</a>
 					<ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600">
 						{tier.features.map((feature) => (
