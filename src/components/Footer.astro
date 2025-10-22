@@ -1,22 +1,14 @@
 ---
-import { useTranslations, type Locale } from '../i18n/utils';
-
-interface Props {
-	locale: Locale;
-}
-
-const { locale } = Astro.props;
-const t = useTranslations(locale);
 const currentYear = new Date().getFullYear();
 
 const navigation = {
 	main: [
-		{ name: t.nav.home, href: `/${locale}` },
-		{ name: t.nav.getStarted, href: `/${locale}/kom-i-gang` },
-		{ name: t.nav.docs, href: `/${locale}/docs` },
-		{ name: t.nav.partners, href: `/${locale}/${locale === 'no' ? 'partnere' : 'partners'}` },
-		...(locale === 'no' ? [{ name: 'Blogg', href: `/${locale}/blogg` }] : []),
-		{ name: t.footer.privacy, href: `/${locale}/personvernserklæring` },
+		{ name: 'Hjem', href: `/` },
+		{ name: 'Kom i gang', href: `/kom-i-gang` },
+		{ name: 'Dokumentasjon', href: `/docs` },
+		{ name: 'Partnere', href: `/partnere` },
+		{ name: 'Blogg', href: `/blogg` },
+		{ name: 'Personvernserklæring', href: `/personvernserklæring` },
 	],
 	social: [
 		{
@@ -49,7 +41,7 @@ const navigation = {
 			))*/}
 		</div>
 		<p class="mt-10 text-center text-sm/6 text-gray-600">
-			&copy; {currentYear} {t.footer.copyright}
+			&copy; {currentYear} Iniva AS. Quick3 for WooCommerce is a product by Iniva.
 		</p>
 	</div>
 </footer>
