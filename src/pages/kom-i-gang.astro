@@ -1,0 +1,307 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+// Heroicons Check Circle Icon
+const CheckCircleIcon = '<svg class="mt-1 size-5 flex-none text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>';
+---
+
+<DocsLayout
+	title="Kom i gang - Quick3 for WooCommerce"
+	description="Kom i gang med Quick3 for WooCommerce. Installer plugin-en, konfigurer API-token, og start synkronisering mellom Quick3 ERP og WooCommerce."
+	currentPath={Astro.url.pathname}
+>
+	<div class="mx-auto max-w-3xl text-base/7 text-gray-700">
+		<Breadcrumb items={[
+			{ label: "Hjem", href: "/" },
+			{ label: "Kom i gang" }
+		]} />
+		<p class="text-base/7 font-semibold text-indigo-600">Quick3 for WooCommerce</p>
+		<h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+			Kom i gang på under 10 minutter
+		</h1>
+		<p class="mt-6 text-xl/8">
+			Følg denne enkle veiledningen for å koble Quick3 ERP til WooCommerce. Med 7 enkle steg får du automatisk synkronisering av produkter, priser, ordre og lagerbeholdning.
+		</p>
+
+		<!-- Download Section -->
+		<div class="mt-10 max-w-2xl">
+			<div class="rounded-2xl bg-indigo-50 p-8 ring-1 ring-inset ring-indigo-600/10">
+				<div class="flex items-start gap-x-4">
+					<svg class="mt-1 size-6 flex-none text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+					</svg>
+					<div class="flex-auto">
+						<h3 class="text-lg font-semibold text-gray-900">Last ned plugin</h3>
+						<p class="mt-2 text-sm text-gray-600">Kom i gang gratis ved å laste ned Quick3 for WooCommerce-pluginen. Ingen kredittkort påkrevd.</p>
+						<div class="mt-6">
+							<a
+								href="https://checkout.freemius.com/plugin/20957/plan/34943/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="inline-block rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+							>
+								Last ned gratis
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mt-10 max-w-2xl">
+			<h2 class="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+				1. Installer pluginen
+			</h2>
+			<p class="mt-6">
+				Finn og installer Quick3 for WooCommerce fra WordPress plugin-katalogen. Prosessen tar bare noen få minutter og krever ingen teknisk ekspertise.
+			</p>
+			<ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Logg inn på WordPress</strong> og gå til admin-panelet hvor du administrerer nettstedet ditt.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Plugins → Legg til ny</strong> for å finne og installere nye WordPress-plugins.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Søk etter "Quick3 for WooCommerce"</strong> i plugin-katalogen og klikk Installer nå.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Aktiver pluginen</strong> etter installasjon for å komme i gang.'} />
+				</li>
+			</ul>
+			<figure class="mt-10 border-l border-indigo-600 pl-9">
+				<blockquote class="font-semibold text-gray-900">
+					<p>
+						"Viktig: Sørg for at WooCommerce allerede er installert og aktivert før du installerer Quick3 for WooCommerce."
+					</p>
+				</blockquote>
+			</figure>
+
+			<h2 class="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+				2. Aktiver lisens
+			</h2>
+			<p class="mt-6">
+				Aktiver eller kjøp Freemius-lisensen for å få tilgang til alle funksjoner. Pluginen tilbyr både gratis og betalte alternativer avhengig av dine behov.
+			</p>
+			<ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Følg Freemius-instruksjonene</strong> som vises etter aktivering av pluginen.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Velg lisenstype</strong> – gratis for testing eller betalt for produksjon med prioritert support.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Bedriftsbruk?</strong> Betalt lisens anbefales for produksjonsmiljøer med dedikert støtte.'} />
+				</li>
+			</ul>
+
+			<h2 class="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+				3. Skaff Quick3 API-token
+			</h2>
+			<p class="mt-6">
+				For å koble til Quick3 ERP trenger du en API-token. Denne genereres direkte fra din Quick3-konto og gir pluginen sikker tilgang til produktdata.
+			</p>
+			<ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Logg inn på Quick3</strong> med din bedriftskonto.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Gå til Hjem → Klientinnstillinger → Sikkerhet</strong> for å administrere API-tilgang.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Generer ny token</strong> og velg ApiV2 som api type. Husk å marker denne som aktiv.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Kopier API nøkkelen</strong> og ha den klar til neste steg.'} />
+				</li>
+			</ul>
+			<figure class="mt-10 border-l border-indigo-600 pl-9">
+				<blockquote class="font-semibold text-gray-900">
+					<p>
+						"Dersom du ikke har tilgang til API-innstillinger, kontakt Quick3 support for å få aktivert API-tilgang på din konto. Vi bruker V2 API (BETA)."
+					</p>
+				</blockquote>
+			</figure>
+
+			<h2 class="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+				4. Konfigurer Quick3-tilkobling
+			</h2>
+			<p class="mt-6">
+				API nøkkelen skal legges inn i wp-config.php filen da denne er sikrere enn å legge den inn via admin-panelet.
+			</p>
+
+			<h3 class="mt-10 text-xl font-semibold text-gray-900">Steg 1: wp-config.php</h3>
+			<p class="mt-4" set:html={'Rediger <code class="text-sm font-mono text-gray-900">wp-config.php</code> og legg til følgende linjer over <code class="text-sm font-mono text-gray-900">/* That\'s all, stop editing! */</code>:'} />
+			<pre class="mt-6 bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"><code>// Quick3 API Configuration
+define('QUICK3_TOKEN', 'din-api-token-her');</code></pre>
+
+			<h3 class="mt-10 text-xl font-semibold text-gray-900">Steg 2: Via admin-panel</h3>
+			<ul role="list" class="mt-6 max-w-xl space-y-8 text-gray-600">
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Gå til Quick3 for WooCommerce → Innstillinger</strong> i WordPress-menyen.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Fyll inn Base URL:</strong> Denne finner du i Quick3 ved å se på URLen. Du legger inn det som ligner på denne: <code class="text-sm font-mono text-gray-900">https://q3.quick.no/ProdShared021</code>'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Lagre og test tilkoblingen</strong> for å verifisere at alt fungerer.'} />
+				</li>
+			</ul>
+
+			<h2 class="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+				5. Konfigurer ordreinnstillinger
+			</h2>
+			<p class="mt-6">
+				Koble WooCommerce betalingsmetoder til Quick3 betalingsbetingelser for automatisk ordresynkronisering. Dette sikrer at ordre behandles korrekt i Quick3 basert på hvordan kunden betaler.
+			</p>
+			<ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Gå til Quick3 for wooCommerce → Innstillinger → Order Settings</strong> i WordPress-menyen.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Aktiver Auto-sync orders to Quick3</strong> for automatisk ordresynkronisering.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Match betalingsmetoder:</strong> Match betalingsmetoden i WooCommerce med riktig konto i Quick3.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Velg standard konto for nye produkter:</strong> Dersom det er et produkt i WooCommerce som ikke finnes i Quick3, så må du velge en standard konto som dette skal føres mot i Quick3.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Lagre innstillingene</strong> når du er ferdig med konfigurasjonen.'} />
+				</li>
+			</ul>
+			<p class="mt-8">
+				Betalingsbetingelsene hentes automatisk fra Quick3 når tilkoblingen er konfigurert, slik at du alltid har oppdaterte alternativer å velge mellom.
+			</p>
+
+			<h2 class="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+				6. Verifiser synkroniseringsjobber
+			</h2>
+			<p class="mt-6">
+				Nå som alt er konfigurert, sjekk at automatiske synkroniseringsjobber kjører som forventet.
+			</p>
+			<ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Gå til Quick3 for WooCommerce → Jobber</strong> for å se jobbstatus.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Se etter jobbkjøringer</strong> som starter automatisk basert på konfigurert intervall.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Klikk på en jobb</strong> for å se detaljert status og logger i sanntid.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Vent på "Completed" status</strong> – første synk kan ta noen minutter avhengig av produktantall.'} />
+				</li>
+			</ul>
+
+			<div class="mt-10 border-l border-indigo-600 pl-9">
+				<h3 class="text-xl font-semibold text-gray-900">Hva synkroniseres?</h3>
+				<ul role="list" class="mt-6 space-y-3 text-gray-600">
+					<li class="flex gap-x-3">
+						<span class="text-indigo-600">✓</span>
+						<span>Produkter fra Quick3 til WooCommerce</span>
+					</li>
+					<li class="flex gap-x-3">
+						<span class="text-indigo-600">✓</span>
+						<span>Priser og salg</span>
+					</li>
+					<li class="flex gap-x-3">
+						<span class="text-indigo-600">✓</span>
+						<span>Lagerbeholdning</span>
+					</li>
+					<li class="flex gap-x-3">
+						<span class="text-indigo-600">✓</span>
+						<span>Produktbilder</span>
+					</li>
+					<li class="flex gap-x-3">
+						<span class="text-indigo-600">✓</span>
+						<span>Produktvarianter</span>
+					</li>
+				</ul>
+			</div>
+
+			<h2 class="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+				7. Bekreft ordresynkronisering
+			</h2>
+			<p class="mt-6">
+				Siste steg er å teste at ordre synkroniseres korrekt tilbake til Quick3. Dette sikrer at hele flyten fra nettbutikk til ERP-system fungerer sømløst.
+			</p>
+			<ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Gå til WooCommerce-nettbutikken</strong> og legg en testordre.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Fullfør betalingen</strong> og pass på at ordren har kommet til "processing".'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Logg inn på Quick3</strong> og verifiser at ordren vises der.'} />
+				</li>
+				<li class="flex gap-x-3">
+					<Fragment set:html={CheckCircleIcon} />
+					<span set:html={'<strong class="font-semibold text-gray-900">Sjekk detaljer</strong> – kunde-, produkt- og betalingsinformasjon skal være korrekt.'} />
+				</li>
+			</ul>
+
+			<figure class="mt-16 border-l border-indigo-600 pl-9">
+				<blockquote class="font-semibold text-indigo-900">
+					<p>
+						"Gratulerer! Quick3 for WooCommerce er nå fullstendig konfigurert og klar til bruk. Du har automatisk synkronisering av produkter, priser, lager og ordre."
+					</p>
+				</blockquote>
+			</figure>
+
+			<h2 class="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+				Du er klar til å gå live!
+			</h2>
+			<p class="mt-6">
+				Quick3 for WooCommerce vil nå automatisk holde produkter, priser og lagerbeholdning synkronisert mellom Quick3 ERP og WooCommerce. Ordre sendes automatisk til Quick3 når de er betalt, og alt skjer i bakgrunnen uten at du trenger å gjøre noe.
+			</p>
+			<p class="mt-8">
+				Synkroniseringen kjører automatisk hver 15. minutt (om du har enterprise), noe som betyr at produktdata og lagerstatus alltid er oppdatert. Du kan når som helst sjekke status på jobbene i admin-panelet eller justere innstillinger etter behov.
+			</p>
+
+			<div class="mt-16 border-t border-gray-200 pt-8">
+				<h3 class="text-xl font-semibold text-gray-900">Neste steg</h3>
+				<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+					<a href="/docs" class="group block p-6 bg-gray-50 rounded-xl hover:bg-indigo-50 transition-colors border border-gray-200 hover:border-indigo-300">
+						<div class="font-semibold text-indigo-600 mb-2 group-hover:text-indigo-700">Les dokumentasjonen →</div>
+						<p class="text-sm text-gray-600">Lær mer om hvordan synkronisering fungerer og utforsk avanserte funksjoner</p>
+					</a>
+					<a href="/#contact" class="group block p-6 bg-gray-50 rounded-xl hover:bg-indigo-50 transition-colors border border-gray-200 hover:border-indigo-300">
+						<div class="font-semibold text-indigo-600 mb-2 group-hover:text-indigo-700">Trenger du hjelp? →</div>
+						<p class="text-sm text-gray-600">Kontakt oss for support, assistanse eller spørsmål om oppsettet</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</DocsLayout>
