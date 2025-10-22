@@ -1,42 +1,33 @@
 ---
-import { useTranslations, type Locale } from '../i18n/utils';
-
-interface Props {
-	locale: Locale;
-}
-
-const { locale } = Astro.props;
-const t = useTranslations(locale);
-
 const features = [
 	{
-		name: t.features.productSync.name,
-		description: t.features.productSync.description,
+		name: "Automatisk produktsynkronisering",
+		description: "Importer og oppdater produkter fra Quick3 til WooCommerce automatisk. Produktinformasjon, bilder, priser og varianter holdes alltid oppdatert – uten manuelt arbeid.",
 		icon: 'refresh',
 	},
 	{
-		name: t.features.orderSync.name,
-		description: t.features.orderSync.description,
+		name: "Sanntids ordresynkronisering",
+		description: "Ordre fra WooCommerce overføres øyeblikkelig til Quick3 med komplette kundedata og betalingsinformasjon. Ingen forsinkelser, ingen manuelle inngrep.",
 		icon: 'shopping-cart',
 	},
 	{
-		name: t.features.multiWarehouse.name,
-		description: t.features.multiWarehouse.description,
+		name: "Flerlagerstyring",
+		description: "Hold lagerbeholdningen oppdatert på tvers av alle lokasjoner. Kundene kan se tilgjengelighet per lager direkte i nettbutikken – perfekt for fysiske butikker med flere lokasjoner.",
 		icon: 'building-storefront',
 	},
 	{
-		name: t.features.smartPricing.name,
-		description: t.features.smartPricing.description,
+		name: "Intelligent prissetting",
+		description: "Avansert prissystem med støtte for ordinær pris, kampanjepriser, tidsbaserte kampanjer, volumrabatter og kundeprislister. Alt synkroniseres automatisk.",
 		icon: 'currency-dollar',
 	},
 	{
-		name: t.features.backgroundProcessing.name,
-		description: t.features.backgroundProcessing.description,
+		name: "Pålitelig bakgrunnsprosessering",
+		description: "Robust jobsystem håndterer store kataloger uten problemer. Prosessene kjører i bakgrunnen uten å påvirke butikkens ytelse, med automatisk feilhåndtering og selvhelbredende funksjoner.",
 		icon: 'cog',
 	},
 	{
-		name: t.features.wordpressNative.name,
-		description: t.features.wordpressNative.description,
+		name: "WordPress-native plugin",
+		description: "Bygget med WordPress og WooCommerce standarder. Følger beste praksis for ytelse, sikkerhet og vedlikehold. Full støtte for WooCommerce hooks og filters for utviklere.",
 		icon: 'shield',
 	},
 ];
@@ -54,12 +45,12 @@ const icons = {
 <div class="bg-white py-24 sm:py-32">
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto max-w-2xl lg:text-center">
-			<h2 class="text-base/7 font-semibold text-indigo-600">{t.features.heading}</h2>
+			<h2 class="text-base/7 font-semibold text-indigo-600">Automatiser alt</h2>
 			<p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">
-				{t.features.title}
+				Alt du trenger for sømløs synkronisering
 			</p>
 			<p class="mt-6 text-lg/8 text-gray-600">
-				{t.features.description}
+				Quick3 for WooCommerce gjør det enkelt å holde produkter og lager synkronisert mellom Quick3 ERP og WooCommerce. Robust bakgrunnsprosessering håndterer store kataloger uten problemer.
 			</p>
 		</div>
 		<div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
