@@ -1,13 +1,4 @@
 ---
-import { useTranslations, type Locale } from '../i18n/utils';
-
-interface Props {
-	locale: Locale;
-}
-
-const { locale } = Astro.props;
-const t = useTranslations(locale);
-
 // You can set the n8n webhook URL via environment variable or pass it as a prop
 const n8nWebhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL || '';
 ---
@@ -23,14 +14,14 @@ const n8nWebhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL || '';
     />
   </div>
   <div class="mx-auto max-w-2xl text-center">
-    <h2 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{t.contact.title}</h2>
-    <p class="mt-2 text-lg/8 text-gray-600">{t.contact.description}</p>
+    <h2 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Kontakt oss</h2>
+    <p class="mt-2 text-lg/8 text-gray-600">Få hjelp med eksisterende installasjon eller oppsett av ny.</p>
   </div>
   <form id="contact-form" data-n8n-url={n8nWebhookUrl} class="mx-auto mt-16 max-w-xl sm:mt-20">
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
       <div class="sm:col-span-2">
         <label for="name" class="block text-sm/6 font-semibold text-gray-900">
-          {t.contact.form.name}
+          Navn
         </label>
         <div class="mt-2.5">
           <input
@@ -45,7 +36,7 @@ const n8nWebhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL || '';
       </div>
       <div class="sm:col-span-2">
         <label for="company" class="block text-sm/6 font-semibold text-gray-900">
-          {t.contact.form.company}
+          Bedrift
         </label>
         <div class="mt-2.5">
           <input
@@ -59,7 +50,7 @@ const n8nWebhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL || '';
       </div>
       <div class="sm:col-span-2">
         <label for="email" class="block text-sm/6 font-semibold text-gray-900">
-          {t.contact.form.email}
+          E-post
         </label>
         <div class="mt-2.5">
           <input
@@ -74,7 +65,7 @@ const n8nWebhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL || '';
       </div>
       <div class="sm:col-span-2">
         <label for="phone-number" class="block text-sm/6 font-semibold text-gray-900">
-          {t.contact.form.phone}
+          Telefon.nr:
         </label>
         <div class="mt-2.5">
           <input
@@ -88,7 +79,7 @@ const n8nWebhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL || '';
       </div>
       <div class="sm:col-span-2">
         <label for="message" class="block text-sm/6 font-semibold text-gray-900">
-          {t.contact.form.message}
+          Melding
         </label>
         <div class="mt-2.5">
           <textarea
@@ -115,9 +106,9 @@ const n8nWebhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL || '';
           </div>
         </div>
         <label for="agree-to-policies" class="text-sm/6 text-gray-600">
-          {t.contact.form.privacyText}{' '}
-          <a href={`/${locale}/personvernserklæring`} class="whitespace-nowrap font-semibold text-blue-600">
-            {t.contact.form.privacyLink}
+          Ved å huke av her, godtar du vår{' '}
+          <a href="/personvernserklæring" class="whitespace-nowrap font-semibold text-blue-600">
+            personvernserklæring
           </a>.
         </label>
       </div>
@@ -126,10 +117,10 @@ const n8nWebhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL || '';
       <button
         type="submit"
         class="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-        data-submit-text={t.contact.form.submit}
-        data-sending-text={t.contact.form.sending}
+        data-submit-text="Send melding"
+        data-sending-text="Sender..."
       >
-        {t.contact.form.submit}
+        Send melding
       </button>
     </div>
     <div id="form-status" class="mt-4 text-center text-sm hidden"></div>
@@ -141,13 +132,13 @@ const n8nWebhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL || '';
   const statusDiv = document.getElementById('form-status') as HTMLDivElement;
   const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
 
-  // Get localized messages from data attributes or defaults
+  // Norwegian message strings
   const messages = {
-    configError: submitButton?.closest('form')?.querySelector('[data-config-error]')?.getAttribute('data-config-error') || 'Configuration error. Please contact support.',
-    success: submitButton?.closest('form')?.querySelector('[data-success]')?.getAttribute('data-success') || 'Thank you! Your message has been sent successfully.',
-    error: submitButton?.closest('form')?.querySelector('[data-error]')?.getAttribute('data-error') || 'Failed to send message. Please try again.',
-    submitText: submitButton?.getAttribute('data-submit-text') || 'Send message',
-    sendingText: submitButton?.getAttribute('data-sending-text') || 'Sending...',
+    configError: 'Konfigurasjonsfeil. Vennligst kontakt support.',
+    success: 'Takk! Din melding har blitt sendt.',
+    error: 'Kunne ikke sende melding. Prøv igjen.',
+    submitText: submitButton?.getAttribute('data-submit-text') || 'Send melding',
+    sendingText: submitButton?.getAttribute('data-sending-text') || 'Sender...',
   };
 
   form?.addEventListener('submit', async (e) => {
