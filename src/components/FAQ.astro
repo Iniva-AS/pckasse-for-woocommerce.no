@@ -1,20 +1,57 @@
 ---
-import { useTranslations, type Locale } from '../i18n/utils';
-
-interface Props {
-	locale: Locale;
-}
-
-const { locale } = Astro.props;
-const t = useTranslations(locale);
-const faqs = t.faq.items;
+const faqs = [
+	{
+		"question": "Kan jeg få hjelp til å sette opp pluginen?",
+		"answer": "Ja! Våre <a href=\"/partnere\" class=\"text-indigo-600 hover:text-indigo-500 underline\">partnere</a> kan hjelpe deg med profesjonelt oppsett og support."
+	},
+	{
+		"question": "Hva er Quick3 for WooCommerce?",
+		"answer": "Quick3 for WooCommerce er en WordPress-plugin som automatisk synkroniserer produkter, priser, lager, ordre og kunder mellom Quick3 ERP og din WooCommerce-butikk. Alt kjører i bakgrunnen, så nettbutikken din holdes oppdatert med Quick3-systemet uten at du trenger å gjøre noe manuelt."
+	},
+	{
+		"question": "Hva er systemkravene?",
+		"answer": "Plugin-en krever: WordPress 6.0 eller nyere, WooCommerce 7.0 eller nyere, PHP 8.1 eller nyere, WP-CLI installert på serveren, og en gyldig Quick3 API-token. Vi anbefaler sterkt en VPS med flere CPU-kjerner fremfor standard webhotell, da synkroniseringen krever prosesseringskraft for datatransformasjon og produktmatching."
+	},
+	{
+		"question": "Hvordan får jeg en Quick3 API-token?",
+		"answer": "Du henter API-tokenet fra din Quick3-konto. Når du har det, legger du det til i WordPress-konfigurasjonen ved å definere QUICK3_TOKEN i wp-config.php-filen din: define('QUICK3_TOKEN', 'ditt-api-token-her'); Les \"Kom i gang\"-guiden for mer informasjon om denne prosessen. Plugin-en viser konfigurasjonsstatus på Quick3 Settings-siden."
+	},
+	{
+		"question": "Hvor ofte synkroniseres data mellom Quick3 og WooCommerce?",
+		"answer": "Synkroniseringsfrekvens avhenger av abonnementet ditt: Free (kun manuell synkronisering), Business (hvert 30. minutt), Enterprise (hvert 15. minutt). Du kan konfigurere dette under WP Admin > Quick3 Settings > Synchronization Settings."
+	},
+	{
+		"question": "Hvilke data synkroniseres?",
+		"answer": "Plugin-en synkroniserer: produkter og produktvarianter, produktnavn, beskrivelser og attributter, ordinære priser og kampanjepriser (inkludert tidsbaserte kampanjer), lagernivåer og lagerstatus, produktbilder, ordre (fra WooCommerce til Quick3), og kundeinformasjon."
+	},
+	{
+		"question": "Hva er produktgrensene for hver plan?",
+		"answer": "Free: Opptil 50 produkter, Business: Opptil 10 000 produkter, Enterprise: Ubegrenset antall produkter. Plugin-en viser ditt nåværende forbruk og grenser på Quick3 Settings-siden med en visuell fremdriftslinje."
+	},
+	{
+		"question": "Fungerer plugin-en med Quick3 sine API-begrensninger?",
+		"answer": "Ja, plugin-en er designet for å fungere innenfor Quick3 sine strenge API-begrensninger. I stedet for å gjøre separate API-kall for hver lageroppdatering, henter plugin-en alle produkter periodisk (basert på abonnementet ditt). Dette holder seg godt innenfor API-grensene samtidig som lageret ditt forblir synkronisert."
+	},
+	{
+		"question": "Hva skjer med mine eksisterende WooCommerce-produkter?",
+		"answer": "Plugin-en sletter ikke eksisterende WooCommerce-produkter. Den oppretter en kobling mellom Quick3-produkter og WooCommerce-produkter ved hjelp av varenummer (SKU) og metadata. Hvis et produkt finnes fra før, oppdateres det. Hvis ingen match finnes, opprettes et nytt produkt. Eksisterende produkter som ikke kommer fra Quick3 forblir urørt."
+	},
+	{
+		"question": "Hvordan feilsøker jeg hvis produkter ikke synkroniseres?",
+		"answer": "Sjekk disse vanlige problemene først: Verifiser at Quick3 API-tokenet er korrekt konfigurert i Quick3 Settings, kontroller at WordPress cron fungerer som det skal, se jobbstatus under WP Admin > Jobs for å sjekke om noen jobber feilet, sjekk jobbloggene for spesifikke feilmeldinger, og sørg for at du ikke har nådd produktgrensen for abonnementet ditt."
+	},
+	{
+		"question": "Kan jeg utløse en synkronisering manuelt i stedet for å vente på automatisk synk?",
+		"answer": "Ja! Du kan når som helst utløse en produktsynkronisering manuelt fra WP Admin > Quick3 for WooCommerce > Jobs. Klikk \"New job\" og velg jobben du vil kjøre. Dette er nyttig for å teste tilkoblingen eller umiddelbart oppdatere etter endringer i Quick3. Quick3 sine API-begrensninger gjelder fortsatt, men plugin-en har innebygd beskyttelse som forhindrer at du overskriver disse grensene."
+	}
+];
 ---
 
 <div class="bg-white">
 	<div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
 		<div class="mx-auto max-w-4xl">
 			<h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-				{t.faq.title}
+				Ofte stilte spørsmål
 			</h2>
 			<dl class="mt-16 divide-y divide-gray-900/10">
 				{faqs.map((faq, index) => (
