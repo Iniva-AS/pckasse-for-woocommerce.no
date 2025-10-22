@@ -2,10 +2,8 @@
 import '../styles/global.css';
 import SEO from '../components/SEO.astro';
 import StructuredData from '../components/StructuredData.astro';
-import { type Locale, getAlternateLocale } from '../i18n/utils';
 
 interface Props {
-	locale: Locale;
 	title: string;
 	description?: string;
 	type?: 'website' | 'article';
@@ -15,7 +13,6 @@ interface Props {
 }
 
 const {
-	locale,
 	title,
 	description = 'Automatisk synkronisering mellom Quick3 ERP og WooCommerce',
 	type = 'website',
@@ -24,14 +21,11 @@ const {
 	canonical
 } = Astro.props;
 
-const alternateLocale = getAlternateLocale(locale);
-const currentPath = Astro.url.pathname;
-const alternatePath = currentPath.replace(`/${locale}`, `/${alternateLocale}`);
 const site = Astro.site || 'https://quick3-for-woocommerce.no';
 ---
 
 <!doctype html>
-<html lang={locale}>
+<html lang="no">
 	<head>
 		<!-- Google Consent Mode v2 - Must load BEFORE GTM -->
 		<script is:inline>
@@ -125,9 +119,6 @@ const site = Astro.site || 'https://quick3-for-woocommerce.no';
 			}
 		</style>
 
-		<!-- Set locale for Klaro -->
-		<script is:inline set:html={`window.__LOCALE__ = ${JSON.stringify(locale)};`}></script>
-
 		<!-- Klaro Configuration -->
 		<script define:inline>
 			window.klaroConfig = {
@@ -150,8 +141,8 @@ const site = Astro.site || 'https://quick3-for-woocommerce.no';
 				hideLearnMore: false,
 				noticeAsModal: true,
 
-				// Use server-side locale from Astro props
-				lang: window.__LOCALE__,
+				// Hardcoded to Norwegian
+				lang: 'no',
 
 				translations: {
 					no: {
@@ -309,16 +300,10 @@ const site = Astro.site || 'https://quick3-for-woocommerce.no';
 		<link rel="icon" type="image/png" sizes="512x512" href="/favicon-large.png?v=1" />
 		<link rel="apple-touch-icon" href="/favicon-large.png?v=1" />
 
-		<!-- Hreflang tags for language alternates -->
-		<link rel="alternate" hreflang={locale} href={`${site}${currentPath}`} />
-		<link rel="alternate" hreflang={alternateLocale} href={`${site}${alternatePath}`} />
-		<link rel="alternate" hreflang="x-default" href={`${site}/no`} />
-
 		<!-- SEO Component -->
 		<SEO
 			title={title}
 			description={description}
-			locale={locale}
 			type={type}
 			image={image}
 			noindex={noindex}
