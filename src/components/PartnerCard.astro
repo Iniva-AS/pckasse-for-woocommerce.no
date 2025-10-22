@@ -3,16 +3,15 @@ import type { CollectionEntry } from 'astro:content';
 
 interface Props {
 	partner: CollectionEntry<'partners'>;
-	locale: 'no' | 'en';
 }
 
-const { partner, locale } = Astro.props;
+const { partner } = Astro.props;
 const partnersPath = 'partnere';
 ---
 
 <article class="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
 	<!-- Partner Logo -->
-	<a href={`/${locale}/${partnersPath}/${partner.slug}`} class="flex h-48 items-center justify-center bg-gray-50 p-8 transition-opacity hover:opacity-75">
+	<a href={`/${partnersPath}/${partner.slug}`} class="flex h-48 items-center justify-center bg-gray-50 p-8 transition-opacity hover:opacity-75">
 		<img
 			src={partner.data.logo}
 			alt={partner.data.title}
@@ -52,10 +51,10 @@ const partnersPath = 'partnere';
 
 		<!-- CTA Button -->
 		<a
-			href={`/${locale}/${partnersPath}/${partner.slug}`}
+			href={`/${partnersPath}/${partner.slug}`}
 			class="inline-flex w-full items-center justify-center rounded-md px-3 py-2 text-sm/6 font-semibold text-indigo-600 inset-ring-1 inset-ring-indigo-200 hover:inset-ring-indigo-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 		>
-			{locale === 'no' ? 'Les mer' : 'Learn more'}
+			Les mer
 			<svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
 			</svg>
