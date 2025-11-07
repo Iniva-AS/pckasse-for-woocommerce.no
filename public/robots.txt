@@ -1,5 +1,0 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Allow: /
-
-Sitemap: https://pckasse-for-woocommerce.no/sitemap-index.xml
