@@ -151,7 +151,7 @@ export function Pricing() {
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
             name="Start"
-            price="750 kr"
+            price="750 kr/mnd"
             description="Perfekt for nyetablerte og mindre bedrifter."
             href="https://app.pckasse-for-woocommerce.no"
             features={[
@@ -167,7 +167,7 @@ export function Pricing() {
           <Plan
             featured
             name="Vekst"
-            price="1 950 kr"
+            price="1 950 kr/mnd"
             description="For voksende bedrifter med stabil ordreflyt."
             href="https://app.pckasse-for-woocommerce.no"
             features={[
@@ -183,7 +183,7 @@ export function Pricing() {
           />
           <Plan
             name="Skala"
-            price="4 950 kr"
+            price="4 950 kr/mnd"
             description="For etablerte bedrifter med høyt ordrevolum."
             href="https://app.pckasse-for-woocommerce.no"
             features={[

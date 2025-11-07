@@ -6,9 +6,9 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import screenshotContacts from '@/images/screenshots/contacts.png'
-import screenshotInventory from '@/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import screenshotSEO from '@/images/misc/seo.jpg'
+import screenshotWordpressMarketplace from '@/images/misc/wordpress-marketplace.png'
+import screenshotCustomDesign from '@/images/misc/custom-design.png'
 
 interface Feature {
   name: React.ReactNode
@@ -21,10 +21,37 @@ interface Feature {
 const features: Array<Feature> = [
   {
     name: 'Skreddersydd design',
-    summary: 'Bygg en nettbutikk som gjenspeiler ditt unike merke og uttrykk.',
+    summary: 'Ditt unike merke og uttrykk',
     description:
-      'Velg blant tusenvis av WordPress-temaer eller lag et helt unikt design. Tilpass farger, fonter, layout og brukeropplevelse akkurat slik du vil ha det. Ingen begrensninger fra en delt plattform.',
-    image: screenshotProfitLoss,
+      'Velg blant tusenvis av WordPress-temaer eller lag et helt unikt design. Tilpass farger, fonter, layout og brukeropplevelse akkurat slik du vil ha det. Ingen begrensninger.',
+    image: screenshotCustomDesign,
+    icon: function FeaturesIcon() {
+      return (
+        <>
+          <path
+            opacity=".5"
+            d="M8 17a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
+            fill="#fff"
+          />
+          <path
+            opacity=".3"
+            d="M8 24a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
+            fill="#fff"
+          />
+          <path
+            d="M8 10a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
+            fill="#fff"
+          />
+        </>
+      )
+    },
+  },
+  {
+    name: 'Ubegrensede funksjoner',
+    summary: 'Full frihet og kontroll',
+    description:
+      'Avansert produktvisning, markedsføringsverktøy, betalingsløsninger - alt er mulig. Utvid butikken din etter behov uten å være begrenset av en ferdig plattform.',
+    image: screenshotWordpressMarketplace,
     icon: function DesignIcon() {
       let id = useId()
       return (
@@ -54,40 +81,11 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Ubegrensede funksjoner',
-    summary:
-      'Legg til akkurat de funksjonene din bedrift trenger med titusenvis av plugins.',
-    description:
-      'Avansert produktvisning, abonnementer, medlemskap, markedsføringsverktøy, betalingsløsninger - alt er mulig. Utvid butikken din etter behov uten å være begrenset av en ferdig plattform.',
-    image: screenshotInventory,
-    icon: function FeaturesIcon() {
-      return (
-        <>
-          <path
-            opacity=".5"
-            d="M8 17a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
-            fill="#fff"
-          />
-          <path
-            opacity=".3"
-            d="M8 24a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
-            fill="#fff"
-          />
-          <path
-            d="M8 10a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
-            fill="#fff"
-          />
-        </>
-      )
-    },
-  },
-  {
     name: 'SEO og innsikt',
-    summary:
-      'Ta kontroll over søkemotoroptimalisering og få dypere innsikt i kundene dine.',
+    summary: 'Søkemotoroptimalisering og innsikt',
     description:
       'Optimaliser butikken for søkemotorer med kraftige SEO-verktøy. Integrer med Google Analytics, Facebook Pixel og andre analyseverktøy. Få detaljert innsikt i kundeadferd og salg som hjelper deg å vokse.',
-    image: screenshotContacts,
+    image: screenshotSEO,
     icon: function InsightIcon() {
       return (
         <>
@@ -154,9 +152,9 @@ function FeaturesMobile() {
           <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
           <div className="relative mt-10 pb-10">
             <div className="absolute -inset-x-4 top-8 bottom-0 bg-slate-200 sm:-inset-x-6" />
-            <div className="relative mx-auto w-211 overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
+            <div className="relative mx-auto w-211 h-[400px] overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
               <Image
-                className="w-full"
+                className="h-full w-full object-cover object-top"
                 src={feature.image}
                 alt=""
                 sizes="52.75rem"
@@ -205,9 +203,9 @@ function FeaturesDesktop() {
                   style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
                   aria-hidden={featureIndex !== selectedIndex}
                 >
-                  <div className="w-211 overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
+                  <div className="w-211 h-[400px] overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
                     <Image
-                      className="w-full"
+                      className="h-full w-full object-cover object-top"
                       src={feature.image}
                       alt=""
                       sizes="52.75rem"
@@ -232,12 +230,14 @@ export function SecondaryFeatures() {
       className="pt-20 pb-14 sm:pt-32 sm:pb-20 lg:pb-32"
     >
       <Container>
-        <div className="mx-auto max-w-2xl md:text-center">
+        <div className="mx-auto max-w-4xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             Ta kontroll over din egen nettbutikk
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            PCKasse-nettbutikk er en delt løsning med begrensede muligheter for tilpasning. Med din egen WooCommerce-butikk får du fullstendig kontroll over design, funksjonalitet, SEO og innsikt. Velg blant titusenvis av plugins og skreddersy butikken akkurat slik din bedrift trenger den.
+            Om du har PCKasse sin nettbutikkløsning så er det veldig begrenset
+            med hva du kan gjøre av endringer. Bruker du vår integrasjon kan du
+            bygge en helt unik nettbutikk, men fortsatt bruke resten av PCKasse.
           </p>
         </div>
         <FeaturesMobile />

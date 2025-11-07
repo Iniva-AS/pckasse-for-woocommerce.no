@@ -7,52 +7,66 @@ const faqs = [
   [
     {
       question: 'Hvor lang tid tar det å sette opp integrasjonen?',
-      answer:
-        'De fleste kommer i gang på 5-10 minutter. Du trenger kun WooCommerce-legitimasjon og PCKasse API-nøkkel. Dashboardet guider deg gjennom hele prosessen.',
+      answer: `De fleste kommer i gang på 5-10 minutter. 
+        Du må ha tilgang til din PCKasse og WordPress installasjon.
+        Veiledningen når du konfigurerer integrasjonen viser deg skritt for 
+        skritt akkurat hva du skal gjøre for å komme i gang.`,
     },
     {
       question: 'Hva synkroniseres mellom PCKasse og WooCommerce?',
-      answer:
-        'Produkter, lagerbeholdning, priser, bilder og varianter synkroniseres fra PCKasse til WooCommerce. Ordre, ordrestatus, krediteringer og kundedata synkroniseres begge veier.',
+      answer: `Fra PCKasse til WooCommerce: Produkter med alle detaljer (varianter,
+                                                                       lagerbeholdning, priser, bilder, dimensjoner, moms), kategorier (opptil 3 nivåer),
+                                                                       produktattributter (merke, farge, størrelse), kundedata, ordrestatus, krediteringer
+                                                                       og sporingsinfo. Fra WooCommerce til PCKasse: Ordre med kunde-, leverings- og
+                                                                       betalingsinformasjon.`,
     },
     {
       question: 'Hva skjer hvis en synkronisering feiler?',
-      answer:
-        'Du får umiddelbar varsel i dashboardet. Alle feilmeldinger inneholder detaljerte logger med forespørsels- og responsdata for enkel feilsøking. Automatisk overvåking varsler deg hvis det oppstår gjentatte feil.',
+      answer: `Alle feil som skjer logges inne i ditt dashboard i sanntid. Det er også 
+         en kø i PCKasse som viser alle oppgaver fra PCKasse til nettbutikken. 
+         Har et skjedd en feil kan du forsøke å slette feilmeldingen i PCKasse og 
+         forsøke handlingen på nytt.`,
     },
   ],
   [
     {
       question: 'Kan jeg teste integrasjonen før jeg går live?',
-      answer:
-        'Ja! Dashboardet har innebygde testverktøy for å validere WooCommerce-legitimasjon og PCKasse API-tilkobling før du aktiverer synkronisering.',
+      answer: `Din PCKasse kan kun være koblet til en ekstern nettbutikk av gangen. 
+         Om du ikke har en eksisterende nettbutikk er det bare til å sette opp 
+         en ny, og bruk en "under konstruksjon" plugin fra wordpress mens du 
+         setter opp nettbutikken din. Har du allerede en nettbutikk anbefaler vi 
+         at du gjør helt klart den nye nettbutikken før du kobler over integrasjonen.`,
     },
     {
-      question: 'Støtter dere flere WooCommerce-butikker?',
+      question: 'Kan jeg ha fler integrasjoner på en konto?',
       answer:
         'Ja, du kan opprette flere integrasjoner under samme organisasjon. Hver integrasjon håndteres separat med egne innstillinger og logger.',
     },
     {
-      question: 'Hvordan håndteres kundedata og sikkerhet?',
-      answer:
-        'All legitimasjon krypteres med AES-256. API-tilgang bruker SOAP API som PCKasse kaller direkte. Komplett auditlogg gir full sporbarhet av alle operasjoner.',
+      question: 'Hvordan håndteres hemmelig informasjon og sikkerhet?',
+      answer: `Alle API-nøkler og passord krypteres med AES-256 før lagring. Webhooks
+      valideres med HMAC-SHA256 signaturer. Komplett auditlogg med fullstendige
+      request/response detaljer (automatisk sensurert for sensitive data) gir full
+        sporbarhet av alle operasjoner.`,
     },
   ],
   [
     {
       question: 'Hva inkluderer prøveperioden?',
       answer:
-        'Du får 14 dager gratis tilgang til alle funksjoner for din første integrasjon. Ingen kredittkort påkrevd. Du kan teste full synkronisering før du bestemmer deg.',
+        'Du får 14 dager gratis tilgang til alle funksjoner for din første integrasjon. Du kan teste full synkronisering før du bestemmer deg.',
     },
     {
       question: 'Kan jeg invitere medarbeidere?',
       answer:
-        'Ja, du kan invitere medarbeidere til organisasjonen din. Alle får tilgang til dashboardet og kan administrere integrasjoner sammen.',
+        'Ja, du kan invitere medarbeidere til organisasjonen din. Alle får tilgang til dashboardet og dere kan administrere integrasjonene sammen.',
     },
     {
-      question: 'Hva er forskjellen på sanntidssynkronisering og bakgrunnssynkronisering?',
-      answer:
-        'Sanntidssynkronisering bruker webhooks for umiddelbare oppdateringer. Bakgrunnssynkronisering kjører hver 15. minutt som sikkerhetsnett for å fange opp eventuelle ordre som ble savnet.',
+      question: 'Hvor ofte gjøres synkroniseringen?',
+      answer: `Produkter, lager og priser synkroniseres umiddelbart når du gjør endringer
+      i PCKasse. Nye ordre fra WooCommerce legges i kø og venter til du trykker "Hent webordre"
+      i PCKasse. I tillegg kjører systemet en sikkerhetskontroll hver 15. minutt for å fange
+        opp ordre som eventuelt ikke ble fanget opp av webhook.`,
     },
   ],
 ]
@@ -81,7 +95,7 @@ export function Faqs() {
             Ofte stilte spørsmål
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Har du andre spørsmål? Ta kontakt med oss på support@pckasse-for-woocommerce.no
+            Har du andre spørsmål? Ta kontakt med oss - hello@iniva.no
           </p>
         </div>
         <ul

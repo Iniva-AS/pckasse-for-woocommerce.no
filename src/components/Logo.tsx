@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function Logo(props: React.ComponentPropsWithoutRef<'div'>) {
   return (
@@ -18,9 +19,9 @@ export function Logo(props: React.ComponentPropsWithoutRef<'div'>) {
         />
       </a>
       <span className="text-gray-400">/</span>
-      <a href="/" className="-m-1.5 p-1.5">
+      <Link href="/" className="-m-1.5 p-1.5">
         <span className="text-xl font-bold text-gray-900">PCKasse for WooCommerce</span>
-      </a>
+      </Link>
     </div>
   )
 }

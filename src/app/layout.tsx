@@ -8,11 +8,11 @@ import { GoogleScripts } from '@/components/GoogleScripts'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - TaxPal',
-    default: 'TaxPal - Accounting made simple for small businesses',
+    template: '%s - PCKasse for WooCommerce',
+    default: 'PCKasse og WooCommerce. Perfekt synkronisert.',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Ta full kontroll over din nettbutikk, og lag den akkurat slik du vil. Vi synkroniserer produkter, ordre, varelager og kunder helt automatisk – så du kan styre alt fra PCKasse.',
 }
 
 const inter = Inter({
@@ -41,7 +41,7 @@ export default function RootLayout({
         lexend.variable,
       )}
     >
-      <body className="flex h-full flex-col" suppressHydrationWarning>
+      <body className="flex min-h-full flex-col" suppressHydrationWarning>
         {/* Google Consent Mode and Tag Manager */}
         <GoogleScripts />
 

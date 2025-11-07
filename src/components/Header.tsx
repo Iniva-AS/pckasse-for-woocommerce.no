@@ -9,7 +9,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -54,6 +54,9 @@ export function Header() {
           <a href="#pricing" className="text-sm/6 font-semibold text-gray-900">
             Priser
           </a>
+          <Link href="/kontakt" className="text-sm/6 font-semibold text-gray-900">
+            Kontakt
+          </Link>
 
           <Button href="https://app.pckasse-for-woocommerce.no" color="blue">
             Til dashboard
@@ -117,6 +120,12 @@ export function Header() {
                   >
                     Priser
                   </a>
+                  <Link
+                    href="/kontakt"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >
+                    Kontakt
+                  </Link>
                 </div>
                 <div className="py-6">
                   <a
