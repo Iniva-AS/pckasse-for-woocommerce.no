@@ -35,7 +35,11 @@ export function Hero() {
           <Button href="https://app.pckasse-for-woocommerce.no">
             Kom i gang
           </Button>
-          <Button
+          <Button href="/kontakt" variant="outline">
+            Kontakt oss
+          </Button>
+          {/* Temporarily hidden while waiting for video */}
+          {/* <Button
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             variant="outline"
           >
@@ -46,7 +50,7 @@ export function Hero() {
               <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
             </svg>
             <span className="ml-3">Se video</span>
-          </Button>
+          </Button> */}
         </div>
         <p className="mt-2 mb-8 text-sm text-slate-600">
           <svg

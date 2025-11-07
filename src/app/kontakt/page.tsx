@@ -1,13 +1,36 @@
-import type { Metadata } from 'next'
+'use client'
+
+import { useState, useTransition } from 'react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-
-export const metadata: Metadata = {
-  title: 'Kontakt oss',
-  description: 'Ta kontakt med oss for spørsmål om PCKasse for WooCommerce',
-}
+import { submitContactForm } from './actions'
 
 export default function Contact() {
+  const [isPending, startTransition] = useTransition()
+  const [statusMessage, setStatusMessage] = useState<{
+    type: 'success' | 'error' | null
+    text: string
+  }>({ type: null, text: '' })
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setStatusMessage({ type: null, text: '' })
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+
+    startTransition(async () => {
+      const result = await submitContactForm(formData)
+
+      if (result.success) {
+        setStatusMessage({ type: 'success', text: result.message })
+        form.reset()
+      } else {
+        setStatusMessage({ type: 'error', text: result.message })
+      }
+    })
+  }
+
   return (
     <>
       <Header />
@@ -155,12 +178,36 @@ export default function Contact() {
             </div>
           </div>
           <form
-            action="#"
-            method="POST"
+            onSubmit={handleSubmit}
             className="px-6 pt-20 pb-24 sm:pb-32 lg:px-8 lg:py-48"
           >
             <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+              {statusMessage.type && (
+                <div
+                  className={`mb-6 rounded-md px-4 py-3 ${
+                    statusMessage.type === 'success'
+                      ? 'bg-green-50 text-green-800 border border-green-200'
+                      : 'bg-red-50 text-red-800 border border-red-200'
+                  }`}
+                >
+                  <p className="text-sm font-medium">{statusMessage.text}</p>
+                </div>
+              )}
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                {/* Honeypot field for bot detection - hidden from real users */}
+                <div style={{ position: 'absolute', left: '-9999px' }}>
+                  <label htmlFor="website">
+                    Website (leave this field empty)
+                  </label>
+                  <input
+                    type="text"
+                    id="website"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
                 <div>
                   <label
                     htmlFor="first-name"
@@ -174,7 +221,9 @@ export default function Contact() {
                       type="text"
                       name="first-name"
                       autoComplete="given-name"
-                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                      required
+                      disabled={isPending}
+                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                   </div>
                 </div>
@@ -191,7 +240,9 @@ export default function Contact() {
                       type="text"
                       name="last-name"
                       autoComplete="family-name"
-                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                      required
+                      disabled={isPending}
+                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                   </div>
                 </div>
@@ -208,7 +259,9 @@ export default function Contact() {
                       type="email"
                       name="email"
                       autoComplete="email"
-                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                      required
+                      disabled={isPending}
+                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                   </div>
                 </div>
@@ -225,7 +278,8 @@ export default function Contact() {
                       type="tel"
                       name="phone-number"
                       autoComplete="tel"
-                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                      disabled={isPending}
+                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                   </div>
                 </div>
@@ -241,7 +295,9 @@ export default function Contact() {
                       id="message"
                       name="message"
                       rows={4}
-                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                      required
+                      disabled={isPending}
+                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                   </div>
                 </div>
@@ -249,9 +305,10 @@ export default function Contact() {
               <div className="mt-8 flex justify-end">
                 <button
                   type="submit"
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  disabled={isPending}
+                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send melding
+                  {isPending ? 'Sender...' : 'Send melding'}
                 </button>
               </div>
             </div>

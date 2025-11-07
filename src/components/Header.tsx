@@ -42,13 +42,16 @@ export function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12 lg:items-center">
-          <a href="#features" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/#features" className="text-sm/6 font-semibold text-gray-900">
             Funksjoner
           </a>
-          <a href="#pricing" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/#pricing" className="text-sm/6 font-semibold text-gray-900">
             Priser
           </a>
-          <a href="#faq" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="/partnere" className="text-sm/6 font-semibold text-gray-900">
+            Partnere
+          </Link>
+          <a href="/#faq" className="text-sm/6 font-semibold text-gray-900">
             FAQ
           </a>
           <Link href="/kontakt" className="text-sm/6 font-semibold text-gray-900">
@@ -100,19 +103,25 @@ export function Header() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   <a
-                    href="#features"
+                    href="/#features"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Funksjoner
                   </a>
                   <a
-                    href="#pricing"
+                    href="/#pricing"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Priser
                   </a>
+                  <Link
+                    href="/partnere"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >
+                    Partnere
+                  </Link>
                   <a
-                    href="#faq"
+                    href="/#faq"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     FAQ

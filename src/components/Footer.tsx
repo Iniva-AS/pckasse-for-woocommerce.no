@@ -11,20 +11,29 @@ export function Footer({ showDetailedCTA = false }: { showDetailedCTA?: boolean 
           aria-label="Footer"
           className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
         >
-          <a href="#features" className="text-gray-600 hover:text-gray-900">
+          <Link href="/#features" className="text-gray-600 hover:text-gray-900">
             Funksjoner
-          </a>
-          <a href="#pricing" className="text-gray-600 hover:text-gray-900">
+          </Link>
+          <Link href="/#pricing" className="text-gray-600 hover:text-gray-900">
             Priser
-          </a>
-          <a href="#faq" className="text-gray-600 hover:text-gray-900">
+          </Link>
+          <Link href="/#faq" className="text-gray-600 hover:text-gray-900">
             FAQ
-          </a>
+          </Link>
           <Link href="/kontakt" className="text-gray-600 hover:text-gray-900">
             Kontakt
           </Link>
           <Link href="/personvern" className="text-gray-600 hover:text-gray-900">
             Personvern
+          </Link>
+          <Link href="/brukerbetingelser" className="text-gray-600 hover:text-gray-900">
+            Brukerbetingelser
+          </Link>
+          <Link href="/informasjonskapsler" className="text-gray-600 hover:text-gray-900">
+            Informasjonskapsler
+          </Link>
+          <Link href="/databehandleravtale" className="text-gray-600 hover:text-gray-900">
+            Databehandleravtale
           </Link>
         </nav>
         <div className="mt-16 flex justify-center gap-x-10">
