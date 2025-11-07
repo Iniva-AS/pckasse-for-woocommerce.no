@@ -1,33 +1,30 @@
 import Link from 'next/link'
 
-export function Footer() {
+import { DetailedCallToAction } from '@/components/DetailedCallToAction'
+
+export function Footer({ showDetailedCTA = false }: { showDetailedCTA?: boolean }) {
   return (
     <footer className="bg-white">
+      {showDetailedCTA && <DetailedCallToAction />}
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
         <nav
           aria-label="Footer"
           className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
         >
-          <Link href="#" className="text-gray-600 hover:text-gray-900">
-            About
-          </Link>
-          <Link href="#" className="text-gray-600 hover:text-gray-900">
-            Blog
-          </Link>
-          <Link href="#" className="text-gray-600 hover:text-gray-900">
-            Jobs
-          </Link>
-          <Link href="#" className="text-gray-600 hover:text-gray-900">
-            Press
-          </Link>
-          <Link href="#" className="text-gray-600 hover:text-gray-900">
-            Accessibility
-          </Link>
-          <Link href="#" className="text-gray-600 hover:text-gray-900">
-            Partners
-          </Link>
+          <a href="#features" className="text-gray-600 hover:text-gray-900">
+            Funksjoner
+          </a>
+          <a href="#pricing" className="text-gray-600 hover:text-gray-900">
+            Priser
+          </a>
+          <a href="#faq" className="text-gray-600 hover:text-gray-900">
+            FAQ
+          </a>
           <Link href="/kontakt" className="text-gray-600 hover:text-gray-900">
             Kontakt
+          </Link>
+          <Link href="/personvern" className="text-gray-600 hover:text-gray-900">
+            Personvern
           </Link>
         </nav>
         <div className="mt-16 flex justify-center gap-x-10">

@@ -45,14 +45,11 @@ export function Header() {
           <a href="#features" className="text-sm/6 font-semibold text-gray-900">
             Funksjoner
           </a>
-          <a
-            href="#testimonials"
-            className="text-sm/6 font-semibold text-gray-900"
-          >
-            Referanser
-          </a>
           <a href="#pricing" className="text-sm/6 font-semibold text-gray-900">
             Priser
+          </a>
+          <a href="#faq" className="text-sm/6 font-semibold text-gray-900">
+            FAQ
           </a>
           <Link href="/kontakt" className="text-sm/6 font-semibold text-gray-900">
             Kontakt
@@ -109,16 +106,16 @@ export function Header() {
                     Funksjoner
                   </a>
                   <a
-                    href="#testimonials"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Referanser
-                  </a>
-                  <a
                     href="#pricing"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Priser
+                  </a>
+                  <a
+                    href="#faq"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >
+                    FAQ
                   </a>
                   <Link
                     href="/kontakt"
