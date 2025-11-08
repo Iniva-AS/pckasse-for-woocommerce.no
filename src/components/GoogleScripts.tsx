@@ -8,7 +8,7 @@ export function GoogleScripts() {
       {/* Google Consent Mode v2 - Must load BEFORE GTM */}
       <Script
         id="google-consent-mode"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];

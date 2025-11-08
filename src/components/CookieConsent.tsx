@@ -8,7 +8,7 @@ export function CookieConsent() {
       {/* Klaro Config Script */}
       <Script
         id="klaro-config"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.klaroConfig = {
@@ -242,7 +242,7 @@ export function CookieConsent() {
       {/* Klaro CSS via Script */}
       <Script
         id="klaro-css"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function() {
