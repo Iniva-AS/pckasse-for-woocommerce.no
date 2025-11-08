@@ -1,15 +1,22 @@
 ## V1
 
-- [ ] Reskin the website to use the "Play" template. Different vibe.
-- [ ] Start replacing the content to fit PCKasse for WooCommerce
+### Reasons why you should use this and get your own woocommerce store
 
-### Update images/assets
+- [ ] Fullfør denne seksjonen på nettsiden
 
-- [ ] New screenshot
-  - [ ] Dashboard (./public/screenshots/dashboard.png) - Shows the dashboard with the overall overview
-  - [ ] Integrasjon (./public/screenshots/integrasjon.png) - Shows a healthy integration
-  - [ ] logger-og-innsikt (./public/screenshots/logger-og-innsikt.png) - shows that you can view logs and debug issues quickly yourself
-  - [ ] oppsett (./public/screenshots/oppsett.png) - Shows how easy it is to get started with a new integration
+PCKasse har sin egen løsnign for nettbutikk. Dette er en delt løsning mellom
+alle andre som bruker PCKasse, derfor har du veldig begrenset med mulighet
+for å skreddersy bytikken for akkurat din bedrift.
+
+Med en helt egen WooCommerce kan du ta kontroll over nettbutikken din.
+
+Du kan for eksempel:
+
+- Ha helt skreddersydd design og utrykk.
+- Legge til akkurat de funksjonene du trenger.
+- Ta kontroll over SEO
+- Få dypere innsikt
+- Ta i bruk noen av hundretusenvis av plugins som er tilgjengelig for WordPress.
 
 ### Features
 
@@ -20,30 +27,6 @@
 - [ ] Ordresynkronisering
 - [ ] Real-time logging
 - [ ] Kom i gang på 10 minutter
-
-### Pricing and plans
-
-We have very simple pricing. To make it very easy for the customer.
-
-- [ ] Implement pricing and plans
-
-**Start**
-Pris per måned: 750kr eks mva
-Pris per år: 7 200kr eks mva
-
-300 ordre per måned. Normal support.
-
-**Vekst**
-Pris per måned: 1 950kr eks mva
-Pris per år: 18 720kr eks mva
-
-2000 ordre per måned. Normal support.
-
-**Skala**
-Pris per måned: 4 950kr eks mva
-Pris per år: 47 520kr eks mva
-
-Ubegrenset antall ordre. Topp support.
 
 ### Copy
 
@@ -120,6 +103,40 @@ Reliability:
 - [ ] Sette opp conversion tracking
 - [ ] google Ads
 
-## V2
+## Direct sales
 
-- [ ] Figure out how to get self-signup working with todays api server.
+- [ ] Call Veniro, and set up a demo.
+- [ ] Call "Driftsikker", and ask to meet them and show a demo.
+
+## V2 - Forbedre, og legge opp til organisk søk/økt konvertering + mer tyngde
+
+- [ ] Egne undersider for ting
+  - [ ] Priser
+  - [ ] FAQ
+  - [ ] (Snart) Artikler
+  - [ ] (Snart) Dokumentasjon
+
+### Demo video
+
+- [ ] Lag en demo video som kan vises på nettsiden! (Iniva AS kanal på YouTube)
+
+Hei, mitt nav er Ole Herland og det er jeg som har bygget denne integrasjonen
+mellom PCKasse og WooCommerce.
+
+### Artikkel ideer:
+
+- “Omnikanal med WooCommerce”
+
+### (Eksempel artikkel) Fordeler med å ha sin helt egent WooCommerce nettbutikk for din PCKasse
+
+- [ ] Lag artikkel som beskriver fordelene med helt egen WooCommerce, link til denne
+      fra seksjonen med lignende ting på forsiden.
+
+Du kan integrere med et hav av tredjeparts løsninger via plugins.
+
+For eksempel:
+
+- Andre betalingsløsninger, som ...
+- Analyse og innsikt via Google Anaytics, ....
+- SEO plugins som RankMath, Yoast, ...
+- Optimalisering av hastighet med WP Super Cache, CDN, osv...
