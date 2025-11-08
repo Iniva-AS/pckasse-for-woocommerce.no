@@ -125,8 +125,31 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
       <Header />
       <div className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
+          {/* Mobile Back Link */}
+          <div className="mb-6 sm:hidden">
+            <Link
+              href="/partnere"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-500"
+            >
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+              Tilbake til partnere
+            </Link>
+          </div>
+
           {/* Breadcrumb */}
-        <nav className="mb-8 flex" aria-label="Breadcrumb">
+        <nav className="mb-8 hidden sm:flex" aria-label="Breadcrumb">
           <ol className="flex items-center space-x-2 text-sm text-gray-500">
             <li>
               <Link href="/" className="hover:text-gray-700">
@@ -173,7 +196,7 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
           {/* Left Column - Main Content */}
           <div className="lg:col-span-2">
             {/* Logo & Name Header */}
-            <div className="mb-8 flex items-center gap-x-6">
+            <div className="mb-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
               <Image
                 src={partner.logo}
                 alt={`${partner.title} logo`}
