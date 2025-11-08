@@ -1,5 +1,12 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Personvernerklæring',
+  description:
+    'Les om hvordan Iniva AS samler inn, bruker og beskytter personopplysninger i forbindelse med PCKasse for WooCommerce. Vi følger GDPR og norsk personopplysningslov.',
+}
 
 export default function Personvern() {
   return (

@@ -1,5 +1,12 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Databehandleravtale',
+  description:
+    'Databehandleravtale mellom Iniva AS og deg som behandlingsansvarlig. Informasjon om hvordan vi behandler personopplysninger i PCKasse for WooCommerce.',
+}
 
 export default function Databehandleravtale() {
   return (

@@ -97,9 +97,9 @@ Reliability:
 ## Launch
 
 - [ ] Google Search console
-- [ ] Plauseable
-- [ ] Google Tag Manager
-- [ ] Google Analytics
+- [x] Plauseable
+- [x] Google Tag Manager
+- [/] Google Analytics (Verify)
 - [ ] Sette opp conversion tracking
 - [ ] google Ads
 

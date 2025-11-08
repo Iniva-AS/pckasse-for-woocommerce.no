@@ -1,5 +1,12 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Brukerbetingelser',
+  description:
+    'Les vilkårene som regulerer din bruk av PCKasse for WooCommerce. Informasjon om tjenesten, betaling, personvern og dine rettigheter som bruker.',
+}
 
 export default function Brukerbetingelser() {
   return (

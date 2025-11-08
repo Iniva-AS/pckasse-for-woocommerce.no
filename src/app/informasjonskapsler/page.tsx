@@ -1,5 +1,12 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Informasjonskapsler',
+  description:
+    'Informasjon om hvordan PCKasse for WooCommerce bruker informasjonskapsler (cookies). Les om nødvendige, funksjonelle og analysekapsler vi benytter.',
+}
 
 export default function Informasjonskapsler() {
   return (
