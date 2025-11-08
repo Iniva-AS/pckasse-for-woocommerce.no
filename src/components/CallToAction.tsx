@@ -1,7 +1,10 @@
+'use client'
+
 import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { trackCTAClick } from '@/lib/tracking'
 import backgroundImage from '@/images/background-call-to-action.jpg'
 
 export function CallToAction() {
@@ -31,6 +34,9 @@ export function CallToAction() {
             href="https://app.pckasse-for-woocommerce.no"
             color="white"
             className="mt-10"
+            onClick={() =>
+              trackCTAClick('call-to-action', 'Start gratis prøveperiode')
+            }
           >
             Start gratis prøveperiode
           </Button>

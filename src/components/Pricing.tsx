@@ -1,7 +1,10 @@
+'use client'
+
 import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { trackCTAClick } from '@/lib/tracking'
 
 function SwirlyDoodle(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -104,6 +107,7 @@ function Plan({
         color="white"
         className="mt-8"
         aria-label={`Kom i gang med ${name}-planen for ${price}`}
+        onClick={() => trackCTAClick('pricing', `Kom i gang - ${name}`, { plan: name, price })}
       >
         Kom i gang
       </Button>

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Logo } from '@/components/Logo'
 import { Button } from '@/components/Button'
+import { trackCTAClick } from '@/lib/tracking'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -58,7 +59,11 @@ export function Header() {
             Kontakt
           </Link>
 
-          <Button href="https://app.pckasse-for-woocommerce.no" color="blue">
+          <Button
+            href="https://app.pckasse-for-woocommerce.no"
+            color="blue"
+            onClick={() => trackCTAClick('header', 'Til dashboard')}
+          >
             Til dashboard
           </Button>
         </div>
@@ -142,6 +147,7 @@ export function Header() {
                   <a
                     href="https://app.pckasse-for-woocommerce.no"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    onClick={() => trackCTAClick('header-mobile', 'Til dashboard')}
                   >
                     Til dashboard
                   </a>

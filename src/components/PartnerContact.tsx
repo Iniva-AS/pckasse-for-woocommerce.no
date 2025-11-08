@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { trackPartnerClick } from '@/lib/tracking'
 
 interface PartnerContactProps {
   profileImage?: string
@@ -40,6 +43,7 @@ export function PartnerContact({
           target="_blank"
           rel="noopener noreferrer"
           className="flex w-full items-center justify-center gap-2 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500"
+          onClick={() => trackPartnerClick(title, 'website', website)}
         >
           <svg
             className="h-5 w-5"
@@ -61,6 +65,7 @@ export function PartnerContact({
         <a
           href={`mailto:${email}`}
           className="flex w-full items-center justify-center gap-2 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 transition hover:bg-gray-50"
+          onClick={() => trackPartnerClick(title, 'email', email)}
         >
           <svg
             className="h-5 w-5"
@@ -82,6 +87,7 @@ export function PartnerContact({
         <a
           href={`tel:${phone}`}
           className="flex w-full items-center justify-center gap-2 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 transition hover:bg-gray-50"
+          onClick={() => trackPartnerClick(title, 'phone', phone)}
         >
           <svg
             className="h-5 w-5"

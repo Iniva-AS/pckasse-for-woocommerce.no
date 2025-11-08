@@ -4,6 +4,7 @@ import { useState, useTransition } from 'react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { submitContactForm } from './actions'
+import { trackContactFormSubmit } from '@/lib/tracking'
 
 export default function Contact() {
   const [isPending, startTransition] = useTransition()
@@ -25,8 +26,12 @@ export default function Contact() {
       if (result.success) {
         setStatusMessage({ type: 'success', text: result.message })
         form.reset()
+        // Track successful form submission
+        trackContactFormSubmit('success')
       } else {
         setStatusMessage({ type: 'error', text: result.message })
+        // Track failed form submission
+        trackContactFormSubmit('error', result.message)
       }
     })
   }

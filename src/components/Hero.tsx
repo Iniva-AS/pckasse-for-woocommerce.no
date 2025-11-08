@@ -1,7 +1,10 @@
+'use client'
+
 import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { trackCTAClick } from '@/lib/tracking'
 import logoJarlsberg from '/public/customer-logos/jarlsberg-hestesport.png'
 import logoKlara from '/public/customer-logos/klara-logo.svg'
 import logoVeniro from '/public/customer-logos/veniro.svg'
@@ -32,7 +35,10 @@ export function Hero() {
       </p>
       <div className="mt-10 flex flex-col items-center gap-y-6">
         <div className="flex justify-center gap-x-6">
-          <Button href="https://app.pckasse-for-woocommerce.no">
+          <Button
+            href="https://app.pckasse-for-woocommerce.no"
+            onClick={() => trackCTAClick('hero', 'Kom i gang')}
+          >
             Kom i gang
           </Button>
           <Button href="/kontakt" variant="outline">

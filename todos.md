@@ -96,19 +96,19 @@ Reliability:
 
 ## Launch
 
-- [ ] Google Search console
-- [x] Plauseable
-- [x] Google Tag Manager
 - [/] Google Analytics (Verify)
-- [ ] Sette opp conversion tracking
+- [/] Sette opp conversion tracking
 - [ ] google Ads
 
 ## Direct sales
 
-- [ ] Call Veniro, and set up a demo.
+- [ ] Email "Veniro", and set up a demo.
+- [ ] Email "Screenpartner" and ask to meet them and show a demo.
 - [ ] Call "Driftsikker", and ask to meet them and show a demo.
 
 ## V2 - Forbedre, og legge opp til organisk søk/økt konvertering + mer tyngde
+
+> På sikt få sykt mye av organisk søk fra PCKasse søkere? :angel:
 
 - [ ] Egne undersider for ting
   - [ ] Priser
