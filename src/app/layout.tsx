@@ -49,7 +49,7 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-T7HVFHS4"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T4455R3H"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
