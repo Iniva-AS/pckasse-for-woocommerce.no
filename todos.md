@@ -96,9 +96,9 @@ Reliability:
 
 ## Launch
 
-- [/] Google Analytics (Verify)
 - [/] Sette opp conversion tracking
 - [ ] google Ads
+- [ ] Setup posthog
 
 ## Direct sales
 
