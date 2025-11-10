@@ -213,6 +213,7 @@ export function CookieConsent() {
         .klaro .cookie-modal .cm-btn.cm-btn-info {
           color: var(--primary-color);
           border-color: var(--primary-color);
+          background-color: white;
         }
 
         .klaro .cookie-modal .cm-btn.cm-btn-info:hover {

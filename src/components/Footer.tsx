@@ -23,6 +23,9 @@ export function Footer({ showDetailedCTA = false }: { showDetailedCTA?: boolean 
           <Link href="/kontakt" className="text-gray-600 hover:text-gray-900">
             Kontakt
           </Link>
+          <Link href="https://status.iniva.no/" className="text-gray-600 hover:text-gray-900">
+            Status
+          </Link>
           <Link href="/personvern" className="text-gray-600 hover:text-gray-900">
             Personvern
           </Link>
