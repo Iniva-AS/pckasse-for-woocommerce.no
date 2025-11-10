@@ -37,9 +37,9 @@ export function Hero() {
         <div className="flex justify-center gap-x-6">
           <Button
             href="https://app.pckasse-for-woocommerce.no"
-            onClick={() => trackCTAClick('hero', 'Kom i gang')}
+            onClick={() => trackCTAClick('hero', 'Start gratis prøveperiode')}
           >
-            Kom i gang
+            Start gratis prøveperiode
           </Button>
           <Button href="/kontakt" variant="outline">
             Kontakt oss
