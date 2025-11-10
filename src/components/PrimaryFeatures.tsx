@@ -14,25 +14,25 @@ import screenshotTeam from '@/images/screenshots/inviter-ditt-team.png'
 
 const features = [
   {
-    title: 'Full oversikt',
+    title: 'Full kontroll og innsikt',
     description:
       'Få full oversikt over ordreflyt, suksessrate og integrasjonsstatus i et moderne dashboard. Følg med på løpende aktiviteter i sanntid',
     image: screenshotDashboard,
   },
   {
-    title: 'Kom i gang på 5 minutter',
+    title: 'Sett opp på under 5 minutter',
     description:
       'Enkel veileder som hjelper deg i gang på 5 minutter. Du kan også alltid kontakte oss for bistand.',
     image: screenshotSetup,
   },
   {
-    title: 'Logger og feilhåndtering',
+    title: 'Detaljerte logger og automatisk feilhåndtering',
     description:
       'Detaljert logging av alle hendelser med filtrering etter status. Se nøyaktig hva som skjer til en hver tid.',
     image: screenshotLogs,
   },
   {
-    title: 'Inviter dine medarbeidere',
+    title: 'Del tilgangen med ditt team',
     description:
       'Administrer medarbeidere og deres tilgangsrettigheter enkelt. Samarbeid om integrasjonen med riktig tilgangskontroll.',
     image: screenshotTeam,

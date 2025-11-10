@@ -29,9 +29,8 @@ export function Hero() {
         .
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        Ta full kontroll over din nettbutikk, og lag den akkurat slik du vil. Vi
-        synkroniserer produkter, ordre, varelager og kunder helt automatisk – så
-        du kan styre alt fra din PCKasse.
+        Bruk PCKasse‑data til å bygge en unik WooCommerce‑butikk. Vi
+        synkroniserer produkter, ordre, lager og kunder – automatisk.
       </p>
       <div className="mt-10 flex flex-col items-center gap-y-6">
         <div className="flex justify-center gap-x-6">

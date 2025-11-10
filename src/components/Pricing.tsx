@@ -106,10 +106,15 @@ function Plan({
         variant={featured ? 'solid' : 'outline'}
         color="white"
         className="mt-8"
-        aria-label={`Kom i gang med ${name}-planen for ${price}`}
-        onClick={() => trackCTAClick('pricing', `Kom i gang - ${name}`, { plan: name, price })}
+        aria-label={`Start gratis prøveperiode med ${name}-planen for ${price}`}
+        onClick={() =>
+          trackCTAClick('pricing', `Start gratis prøveperiode - ${name}`, {
+            plan: name,
+            price,
+          })
+        }
       >
-        Kom i gang
+        Start gratis prøveperiode
       </Button>
     </section>
   )
@@ -137,7 +142,7 @@ export function Pricing() {
           </p>
           <p className="mt-4 text-sm text-slate-400">
             <svg
-              className="inline-block h-4 w-4 text-green-500 mr-1.5"
+              className="mr-1.5 inline-block h-4 w-4 text-green-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

@@ -152,7 +152,7 @@ function FeaturesMobile() {
           <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
           <div className="relative mt-10 pb-10">
             <div className="absolute -inset-x-4 top-8 bottom-0 bg-slate-200 sm:-inset-x-6" />
-            <div className="relative mx-auto w-211 h-[400px] overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
+            <div className="relative mx-auto h-[400px] w-211 overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
               <Image
                 className="h-full w-full object-cover object-top"
                 src={feature.image}
@@ -203,7 +203,7 @@ function FeaturesDesktop() {
                   style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
                   aria-hidden={featureIndex !== selectedIndex}
                 >
-                  <div className="w-211 h-[400px] overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
+                  <div className="h-[400px] w-211 overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
                     <Image
                       className="h-full w-full object-cover object-top"
                       src={feature.image}
@@ -235,9 +235,10 @@ export function SecondaryFeatures() {
             Ta kontroll over din egen nettbutikk
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Om du har PCKasse sin nettbutikkløsning så er det veldig begrenset
-            med hva du kan gjøre av endringer. Bruker du vår integrasjon kan du
-            bygge en helt unik nettbutikk, men fortsatt bruke resten av PCKasse.
+            PCKasse sin innebygde butikkløsning gir deg lite fleksibilitet. Med
+            denne integrasjonen kan du beholde PCKasse som kassesystem –
+            samtidig som du får en fullverdig WooCommerce‑butikk skreddersydd
+            for dine kunder.
           </p>
         </div>
         <FeaturesMobile />
