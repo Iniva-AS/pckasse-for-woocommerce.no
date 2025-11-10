@@ -4,7 +4,7 @@ This guide will help you configure Google Tag Manager (GTM) to track conversion 
 
 ## Overview
 
-The website now sends custom events to both GTM dataLayer and Plausible Analytics. This guide focuses on setting up GTM to receive and process these events for Google Analytics 4 (GA4) and Google Ads conversion tracking.
+The website sends custom events to GTM dataLayer. This guide focuses on setting up GTM to receive and process these events for Google Analytics 4 (GA4) and Google Ads conversion tracking.
 
 ## Events Being Tracked
 
@@ -191,7 +191,6 @@ If you want to track these conversions in Google Ads:
 
 - The tracking code respects user consent via Klaro consent manager
 - GTM events will only fire if user has consented to analytics/marketing cookies
-- Plausible events always fire (privacy-friendly, no cookies)
 
 ### Event Data Flow
 
@@ -199,7 +198,6 @@ If you want to track these conversions in Google Ads:
 2. Tracking function checks for analytics consent
 3. If consent granted:
    - Event pushed to GTM dataLayer
-   - Event sent to Plausible
 4. GTM receives event and fires configured tags
 5. Data flows to GA4 and/or Google Ads
 

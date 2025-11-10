@@ -1,6 +1,5 @@
 import { type Metadata } from 'next'
 import { Inter, Lexend } from 'next/font/google'
-import Script from 'next/script'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
@@ -55,18 +54,6 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-
-        {/* Plausible Analytics */}
-        <Script
-          src="https://plausible.io/js/pa-yF2_CzWn08nQwB-SDqAWy.js"
-          strategy="afterInteractive"
-        />
-        <Script id="plausible-init" strategy="afterInteractive">
-          {`
-            window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-            plausible.init()
-          `}
-        </Script>
 
         {children}
 
