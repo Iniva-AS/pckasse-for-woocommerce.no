@@ -94,12 +94,6 @@ Reliability:
 - Dead Man's Snitch monitoring for cron jobs
 - Sentry error tracking
 
-## Launch
-
-- [/] Sette opp conversion tracking
-- [ ] google Ads
-- [ ] Setup posthog
-
 ## Direct sales
 
 - [ ] Email "Veniro", and set up a demo.
