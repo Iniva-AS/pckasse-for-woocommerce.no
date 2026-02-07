@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    image: pckasse-for-woocommerce:no-registry
+    env_file:
+      - .env
+    restart: unless-stopped
+    networks:
+      caddy_net:
+        aliases:
+          - pckasse-for-woocommerce
+
+networks:
+  caddy_net:
+    external: true
