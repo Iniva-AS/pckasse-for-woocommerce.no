@@ -20,7 +20,7 @@ docker compose up -d --remove-orphans
 echo "[deploy] Done"
 docker compose ps
 
-if [[ -n "${HEALTH_URL:-}" ]]; then
+if [ -n "${HEALTH_URL:-}" ]; then
   echo "[deploy] Health check ${HEALTH_URL}"
   curl -fsS "${HEALTH_URL}" >/dev/null
   echo "[deploy] Health check passed"
