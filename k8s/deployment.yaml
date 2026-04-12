@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pckasse-for-woocommerce-no
+  namespace: iniva
+  labels:
+    app: pckasse-for-woocommerce-no
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: pckasse-for-woocommerce-no
+  template:
+    metadata:
+      labels:
+        app: pckasse-for-woocommerce-no
+    spec:
+      nodeSelector:
+        cfke.io/provider: hetzner
+        node.kubernetes.io/instance-type: cx33
+        topology.kubernetes.io/region: fsn1
+      imagePullSecrets:
+        - name: dockerhub-secret
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: pckasse-for-woocommerce-no
+          image: iniva/pckasse-for-woocommerce-no:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - secretRef:
+                name: pckasse-env
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pckasse-for-woocommerce-no
+  namespace: iniva
+  labels:
+    app: pckasse-for-woocommerce-no
+spec:
+  type: ClusterIP
+  selector:
+    app: pckasse-for-woocommerce-no
+  ports:
+    - port: 80
+      targetPort: 3000
+      protocol: TCP
