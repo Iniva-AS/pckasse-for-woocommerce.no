@@ -1,5 +1,6 @@
 import { type Metadata } from 'next'
 import { Inter, Lexend } from 'next/font/google'
+import Script from 'next/script'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
@@ -41,6 +42,16 @@ export default function RootLayout({
         lexend.variable,
       )}
     >
+      <head>
+        {/* Plausible Analytics */}
+        <Script
+          src="https://plausible.io/js/pa-JLfY7cPDKb1HOX1F9eRAa.js"
+          strategy="afterInteractive"
+        />
+        <Script id="plausible-init" strategy="afterInteractive">
+          {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}
+        </Script>
+      </head>
       <body className="flex min-h-full flex-col" suppressHydrationWarning>
         {/* Google Consent Mode and Tag Manager */}
         <GoogleScripts />
