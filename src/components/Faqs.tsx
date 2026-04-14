@@ -1,15 +1,12 @@
-import Image from 'next/image'
-
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-faqs.jpg'
 
 const faqs = [
   [
     {
       question: 'Hvor lang tid tar det å sette opp integrasjonen?',
-      answer: `De fleste kommer i gang på 5-10 minutter. 
+      answer: `De fleste kommer i gang på 5-10 minutter.
         Du må ha tilgang til din PCKasse og WordPress installasjon.
-        Veiledningen når du konfigurerer integrasjonen viser deg skritt for 
+        Veiledningen når du konfigurerer integrasjonen viser deg skritt for
         skritt akkurat hva du skal gjøre for å komme i gang.`,
     },
     {
@@ -22,19 +19,19 @@ const faqs = [
     },
     {
       question: 'Hva skjer hvis en synkronisering feiler?',
-      answer: `Alle feil som skjer logges inne i ditt dashboard i sanntid. Det er også 
-         en kø i PCKasse som viser alle oppgaver fra PCKasse til nettbutikken. 
-         Har et skjedd en feil kan du forsøke å slette feilmeldingen i PCKasse og 
+      answer: `Alle feil som skjer logges inne i ditt dashboard i sanntid. Det er også
+         en kø i PCKasse som viser alle oppgaver fra PCKasse til nettbutikken.
+         Har et skjedd en feil kan du forsøke å slette feilmeldingen i PCKasse og
          forsøke handlingen på nytt.`,
     },
   ],
   [
     {
       question: 'Kan jeg teste integrasjonen før jeg går live?',
-      answer: `Din PCKasse kan kun være koblet til en ekstern nettbutikk av gangen. 
-         Om du ikke har en eksisterende nettbutikk er det bare til å sette opp 
-         en ny, og bruk en "under konstruksjon" plugin fra wordpress mens du 
-         setter opp nettbutikken din. Har du allerede en nettbutikk anbefaler vi 
+      answer: `Din PCKasse kan kun være koblet til en ekstern nettbutikk av gangen.
+         Om du ikke har en eksisterende nettbutikk er det bare til å sette opp
+         en ny, og bruk en "under konstruksjon" plugin fra wordpress mens du
+         setter opp nettbutikken din. Har du allerede en nettbutikk anbefaler vi
          at du gjør helt klart den nye nettbutikken før du kobler over integrasjonen.`,
     },
     {
@@ -76,25 +73,17 @@ export function Faqs() {
     <section
       id="faq"
       aria-labelledby="faq-title"
-      className="relative overflow-hidden bg-slate-50 py-20 sm:py-32"
+      className="relative overflow-hidden border-t border-[var(--color-border)] py-20 sm:py-32"
     >
-      <Image
-        className="absolute top-0 left-1/2 max-w-none translate-x-[-30%] -translate-y-1/4"
-        src={backgroundImage}
-        alt=""
-        width={1558}
-        height={946}
-        unoptimized
-      />
       <Container className="relative">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="faq-title"
-            className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
+            className="font-display text-3xl tracking-tight text-[var(--color-text-primary)] sm:text-4xl"
           >
             Ofte stilte spørsmål
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
+          <p className="mt-4 text-lg tracking-tight text-[var(--color-text-secondary)]">
             Har du andre spørsmål? Ta kontakt med oss - hello@iniva.no
           </p>
         </div>
@@ -107,10 +96,12 @@ export function Faqs() {
               <ul role="list" className="flex flex-col gap-y-8">
                 {column.map((faq, faqIndex) => (
                   <li key={faqIndex}>
-                    <h3 className="font-display text-lg/7 text-slate-900">
+                    <h3 className="font-display text-lg/7 text-[var(--color-text-primary)]">
                       {faq.question}
                     </h3>
-                    <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
+                    <p className="mt-4 text-sm text-[var(--color-text-secondary)]">
+                      {faq.answer}
+                    </p>
                   </li>
                 ))}
               </ul>

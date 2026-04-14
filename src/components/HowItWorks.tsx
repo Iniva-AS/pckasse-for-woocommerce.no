@@ -1,9 +1,7 @@
 'use client'
 
 import { useId } from 'react'
-import Image from 'next/image'
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
 
 const steps = [
   {
@@ -26,7 +24,7 @@ const steps = [
   },
 ]
 
-function ProductIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function ProductIcon() {
   let id = useId()
   return (
     <>
@@ -40,7 +38,7 @@ function ProductIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
           gradientUnits="userSpaceOnUse"
         >
           <stop offset=".194" stopColor="#fff" />
-          <stop offset={1} stopColor="#6692F1" />
+          <stop offset={1} stopColor="#999" />
         </linearGradient>
       </defs>
       <path
@@ -62,7 +60,7 @@ function ProductIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function OrderIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function OrderIcon() {
   let id = useId()
   return (
     <>
@@ -76,7 +74,7 @@ function OrderIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
           gradientUnits="userSpaceOnUse"
         >
           <stop offset=".194" stopColor="#fff" />
-          <stop offset={1} stopColor="#6692F1" />
+          <stop offset={1} stopColor="#999" />
         </linearGradient>
       </defs>
       <path
@@ -98,7 +96,7 @@ function OrderIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function RealtimeIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function RealtimeIcon() {
   let id = useId()
   return (
     <>
@@ -112,7 +110,7 @@ function RealtimeIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
           gradientUnits="userSpaceOnUse"
         >
           <stop offset=".194" stopColor="#fff" />
-          <stop offset={1} stopColor="#6692F1" />
+          <stop offset={1} stopColor="#999" />
         </linearGradient>
       </defs>
       <circle
@@ -147,8 +145,8 @@ function PCKasseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
           y2="44"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stopColor="#3B82F6" />
-          <stop offset="1" stopColor="#1D4ED8" />
+          <stop offset="0" stopColor="#484846" />
+          <stop offset="1" stopColor="#30302e" />
         </linearGradient>
       </defs>
       <rect x="6" y="14" width="36" height="26" rx="2" fill={`url(#${id})`} />
@@ -178,8 +176,8 @@ function WooCommerceIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
           y2="44"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stopColor="#8B5CF6" />
-          <stop offset="1" stopColor="#6D28D9" />
+          <stop offset="0" stopColor="#484846" />
+          <stop offset="1" stopColor="#30302e" />
         </linearGradient>
       </defs>
       <path
@@ -204,22 +202,14 @@ export function HowItWorks() {
     <section
       id="how-it-works"
       aria-label="Slik fungerer synkroniseringen"
-      className="relative overflow-hidden bg-slate-50 py-20 sm:py-32"
+      className="relative overflow-hidden border-t border-[var(--color-border)] py-20 sm:py-32"
     >
-      <Image
-        className="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2 opacity-20"
-        src={backgroundImage}
-        alt=""
-        width={2347}
-        height={1244}
-        unoptimized
-      />
       <Container className="relative">
         <div className="mx-auto max-w-2xl md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="font-display text-3xl tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
             Slik fungerer synkroniseringen
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
+          <p className="mt-4 text-lg tracking-tight text-[var(--color-text-secondary)]">
             Jobb fra PCKasse og se butikken oppdatere seg automatisk.
             Fullfør ordre i PCKasse og WooCommerce følger etter.
           </p>
@@ -231,22 +221,22 @@ export function HowItWorks() {
             {steps.map((step, index) => (
               <div
                 key={step.name}
-                className="flex flex-col rounded-3xl bg-white p-8 shadow-xl shadow-slate-900/10 ring-1 ring-slate-900/5"
+                className="flex flex-col rounded-2xl bg-white p-8 ring-1 ring-[var(--color-border)]"
               >
                 <dt className="flex flex-col gap-y-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-600 shadow-lg shadow-blue-600/50">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-brand)]">
                     <svg aria-hidden="true" className="h-10 w-10" fill="none">
                       <step.icon />
                     </svg>
                   </div>
-                  <span className="font-display text-xl font-semibold text-slate-900">
+                  <span className="font-display text-xl text-[var(--color-text-primary)]">
                     {step.name}
                   </span>
                 </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-[var(--color-text-secondary)]">
                   <p className="flex-auto">{step.description}</p>
                   <p className="mt-6">
-                    <span className="inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600">
+                    <span className="inline-flex items-center gap-x-2 text-sm font-semibold text-[var(--color-text-primary)]">
                       Steg {index + 1}
                     </span>
                   </p>
@@ -259,28 +249,28 @@ export function HowItWorks() {
         {/* Data flow visualization */}
         <div className="mx-auto mt-16 max-w-5xl sm:mt-20 lg:mt-24 space-y-8">
           {/* PCKasse to WooCommerce - Products */}
-          <div className="rounded-3xl bg-white p-8 shadow-xl shadow-slate-900/10 ring-1 ring-slate-900/5">
-            <h3 className="text-center font-display text-xl font-semibold text-slate-900 mb-8">
+          <div className="rounded-2xl bg-white p-8 ring-1 ring-[var(--color-border)]">
+            <h3 className="text-center font-display text-xl text-[var(--color-text-primary)] mb-8">
               Fyll nettbutikken din direkte fra PCKasse
             </h3>
             <div className="flex items-center justify-center gap-6">
               <div className="flex flex-col items-center gap-3 w-32">
                 <div className="relative flex h-24 w-24 items-center justify-center">
-                  <PCKasseIcon className="h-full w-full drop-shadow-lg" />
+                  <PCKasseIcon className="h-full w-full" />
                 </div>
-                <span className="text-sm font-semibold text-slate-900">PCKasse</span>
+                <span className="text-sm font-semibold text-[var(--color-text-primary)]">PCKasse</span>
               </div>
               <div className="flex flex-col items-center gap-2 flex-1 max-w-md">
                 <svg
-                  className="h-8 w-full text-blue-600"
+                  className="h-8 w-full text-[var(--color-brand)]"
                   fill="none"
                   viewBox="0 0 200 32"
                   aria-hidden="true"
                 >
                   <defs>
                     <linearGradient id="arrow1" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.6" />
-                      <stop offset="100%" stopColor="#3B82F6" />
+                      <stop offset="0%" stopColor="var(--color-brand)" stopOpacity="0.4" />
+                      <stop offset="100%" stopColor="var(--color-brand)" />
                     </linearGradient>
                   </defs>
                   <path
@@ -291,44 +281,43 @@ export function HowItWorks() {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span className="text-sm font-semibold text-slate-700 bg-blue-50 px-4 py-1.5 rounded-full">
+                <span className="text-sm font-semibold text-[var(--color-text-secondary)] bg-[var(--color-brand-light)] px-4 py-1.5 rounded-full">
                   Produkter, priser, lager
                 </span>
               </div>
               <div className="flex flex-col items-center gap-3 w-32">
                 <div className="relative flex h-24 w-24 items-center justify-center">
-                  <WooCommerceIcon className="h-full w-full drop-shadow-lg" />
+                  <WooCommerceIcon className="h-full w-full" />
                 </div>
-                <span className="text-sm font-semibold text-slate-900">WooCommerce</span>
+                <span className="text-sm font-semibold text-[var(--color-text-primary)]">WooCommerce</span>
               </div>
             </div>
           </div>
 
           {/* Bidirectional order flow */}
-          <div className="rounded-3xl bg-white p-8 shadow-xl shadow-slate-900/10 ring-1 ring-slate-900/5">
-            <h3 className="text-center font-display text-xl font-semibold text-slate-900 mb-8">
+          <div className="rounded-2xl bg-white p-8 ring-1 ring-[var(--color-border)]">
+            <h3 className="text-center font-display text-xl text-[var(--color-text-primary)] mb-8">
               Fullfør alle ordre i PCKasse – WooCommerce følger automatisk
             </h3>
             <div className="flex items-center justify-center gap-6">
               <div className="flex flex-col items-center gap-3 w-32">
                 <div className="relative flex h-24 w-24 items-center justify-center">
-                  <PCKasseIcon className="h-full w-full drop-shadow-lg" />
+                  <PCKasseIcon className="h-full w-full" />
                 </div>
-                <span className="text-sm font-semibold text-slate-900">PCKasse</span>
+                <span className="text-sm font-semibold text-[var(--color-text-primary)]">PCKasse</span>
               </div>
               <div className="flex flex-col items-center gap-4 flex-1 max-w-md">
-                {/* New orders to PCKasse */}
                 <div className="flex flex-col items-center gap-2 w-full">
                   <svg
-                    className="h-8 w-full text-blue-600"
+                    className="h-8 w-full text-[var(--color-brand)]"
                     fill="none"
                     viewBox="0 0 200 32"
                     aria-hidden="true"
                   >
                     <defs>
                       <linearGradient id="arrow2" x1="100%" y1="0%" x2="0%" y2="0%">
-                        <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.6" />
-                        <stop offset="100%" stopColor="#3B82F6" />
+                        <stop offset="0%" stopColor="var(--color-brand)" stopOpacity="0.4" />
+                        <stop offset="100%" stopColor="var(--color-brand)" />
                       </linearGradient>
                     </defs>
                     <path
@@ -339,22 +328,21 @@ export function HowItWorks() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="text-sm font-semibold text-slate-700 bg-blue-50 px-4 py-1.5 rounded-full">
+                  <span className="text-sm font-semibold text-[var(--color-text-secondary)] bg-[var(--color-brand-light)] px-4 py-1.5 rounded-full">
                     Nye ordre
                   </span>
                 </div>
-                {/* Completed orders to WooCommerce */}
                 <div className="flex flex-col items-center gap-2 w-full">
                   <svg
-                    className="h-8 w-full text-blue-600"
+                    className="h-8 w-full text-[var(--color-brand)]"
                     fill="none"
                     viewBox="0 0 200 32"
                     aria-hidden="true"
                   >
                     <defs>
                       <linearGradient id="arrow3" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.6" />
-                        <stop offset="100%" stopColor="#3B82F6" />
+                        <stop offset="0%" stopColor="var(--color-brand)" stopOpacity="0.4" />
+                        <stop offset="100%" stopColor="var(--color-brand)" />
                       </linearGradient>
                     </defs>
                     <path
@@ -365,16 +353,16 @@ export function HowItWorks() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="text-sm font-semibold text-slate-700 bg-blue-50 px-4 py-1.5 rounded-full">
+                  <span className="text-sm font-semibold text-[var(--color-text-secondary)] bg-[var(--color-brand-light)] px-4 py-1.5 rounded-full">
                     Fullførte ordre
                   </span>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-3 w-32">
                 <div className="relative flex h-24 w-24 items-center justify-center">
-                  <WooCommerceIcon className="h-full w-full drop-shadow-lg" />
+                  <WooCommerceIcon className="h-full w-full" />
                 </div>
-                <span className="text-sm font-semibold text-slate-900">WooCommerce</span>
+                <span className="text-sm font-semibold text-[var(--color-text-primary)]">WooCommerce</span>
               </div>
             </div>
           </div>

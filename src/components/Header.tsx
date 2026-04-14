@@ -10,7 +10,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-[var(--color-surface)] border-b border-[var(--color-border)]">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -23,7 +23,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-[var(--color-text-primary)]"
           >
             <span className="sr-only">Åpne meny</span>
             <svg
@@ -43,25 +43,24 @@ export function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12 lg:items-center">
-          <Link href="/#features" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="/#features" className="text-sm/6 font-medium text-[var(--color-text-primary)] hover:text-[var(--color-brand-hover)]">
             Funksjoner
           </Link>
-          <Link href="/#pricing" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="/#pricing" className="text-sm/6 font-medium text-[var(--color-text-primary)] hover:text-[var(--color-brand-hover)]">
             Priser
           </Link>
-          <Link href="/partnere" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="/partnere" className="text-sm/6 font-medium text-[var(--color-text-primary)] hover:text-[var(--color-brand-hover)]">
             Partnere
           </Link>
-          <Link href="/#faq" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="/#faq" className="text-sm/6 font-medium text-[var(--color-text-primary)] hover:text-[var(--color-brand-hover)]">
             FAQ
           </Link>
-          <Link href="/kontakt" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="/kontakt" className="text-sm/6 font-medium text-[var(--color-text-primary)] hover:text-[var(--color-brand-hover)]">
             Kontakt
           </Link>
 
           <Button
             href="https://app.pckasse-for-woocommerce.no"
-            color="blue"
             onClick={() => trackCTAClick('header', 'Til dashboard')}
           >
             Til dashboard
@@ -76,7 +75,7 @@ export function Header() {
             className="fixed inset-0 z-50"
             onClick={() => setMobileMenuOpen(false)}
           />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[var(--color-surface)] p-6 sm:max-w-sm sm:ring-1 sm:ring-[var(--color-border)]">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">PCKasse for WooCommerce</span>
@@ -85,7 +84,7 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                className="-m-2.5 rounded-md p-2.5 text-[var(--color-text-primary)]"
               >
                 <span className="sr-only">Lukk meny</span>
                 <svg
@@ -105,40 +104,40 @@ export function Header() {
               </button>
             </div>
             <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="-my-6 divide-y divide-[var(--color-border)]">
                 <div className="space-y-2 py-6">
                   <Link
                     href="/#features"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-brand-light)]"
                   >
                     Funksjoner
                   </Link>
                   <Link
                     href="/#pricing"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-brand-light)]"
                   >
                     Priser
                   </Link>
                   <Link
                     href="/partnere"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-brand-light)]"
                   >
                     Partnere
                   </Link>
                   <Link
                     href="/#faq"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-brand-light)]"
                   >
                     FAQ
                   </Link>
                   <Link
                     href="/kontakt"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-brand-light)]"
                   >
                     Kontakt
                   </Link>
@@ -146,7 +145,7 @@ export function Header() {
                 <div className="py-6">
                   <a
                     href="https://app.pckasse-for-woocommerce.no"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-brand-light)]"
                     onClick={() => trackCTAClick('header-mobile', 'Til dashboard')}
                   >
                     Til dashboard

@@ -33,8 +33,17 @@
 
   --radius-4xl: 2rem;
 
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-lexend);
+  --font-sans: var(--font-funnel-display);
+  --font-display: var(--font-dm-serif-display);
 
   --container-2xl: 40rem;
+
+  --color-surface: #fafaf8;
+  --color-brand: #30302e;
+  --color-brand-hover: #484846;
+  --color-brand-light: #faf9f5;
+  --color-border: #e5e5e0;
+  --color-text-primary: #111111;
+  --color-text-secondary: #555555;
+  --color-text-muted: #999999;
 }

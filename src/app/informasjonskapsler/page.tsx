@@ -13,12 +13,12 @@ export default function Informasjonskapsler() {
     <>
       <Header />
       <main>
-        <div className="bg-white px-6 py-32 lg:px-8">
-          <div className="mx-auto max-w-3xl text-base/7 text-gray-700">
-            <p className="text-base/7 font-semibold text-indigo-600">
+        <div className="px-6 py-32 lg:px-8">
+          <div className="mx-auto max-w-3xl text-base/7 text-[var(--color-text-secondary)]">
+            <p className="text-base/7 font-semibold text-[var(--color-text-secondary)]">
               Personvern
             </p>
-            <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+            <h1 className="mt-2 text-4xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)] sm:text-5xl">
               Informasjonskapsler (Cookies)
             </h1>
             <p className="mt-6 text-xl/8">
@@ -26,8 +26,8 @@ export default function Informasjonskapsler() {
               informasjonskapsler.
             </p>
 
-            <div className="mt-10 max-w-2xl text-gray-600">
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+            <div className="mt-10 max-w-2xl text-[var(--color-text-secondary)]">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 Hva er cookies?
               </h2>
               <p className="mt-6">
@@ -35,78 +35,78 @@ export default function Informasjonskapsler() {
                 analyse og brukeropplevelse.
               </p>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 Våre cookies
               </h2>
 
               <div className="mt-8 overflow-hidden rounded-lg border border-gray-200">
                 <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50">
+                  <thead className="bg-[var(--color-brand-light)]">
                     <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-700">
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--color-text-secondary)]">
                         Navn
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-700">
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--color-text-secondary)]">
                         Formål
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-700">
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--color-text-secondary)]">
                         Varighet
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-700">
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--color-text-secondary)]">
                         Type
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-gray-200 bg-white">
+                  <tbody className="divide-y divide-gray-200 bg-transparent">
                     <tr>
-                      <td className="px-6 py-4 text-sm text-gray-900">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-primary)]">
                         session_id
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Holder deg innlogget
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Sesjon
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Nødvendig
                       </td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 text-sm text-gray-900">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-primary)]">
                         cookie_consent
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Lagrer samtykkevalg
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">1 år</td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">1 år</td>
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Nødvendig
                       </td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 text-sm text-gray-900">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-primary)]">
                         _ga, _gid
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Google Analytics
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         2 år / 24t
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Analyse
                       </td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 text-sm text-gray-900">_fbp</td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-primary)]">_fbp</td>
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Facebook Pixel
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         3 mnd
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Markedsføring
                       </td>
                     </tr>
@@ -114,10 +114,10 @@ export default function Informasjonskapsler() {
                 </table>
               </div>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 Rettslig grunnlag
               </h2>
-              <ul role="list" className="mt-6 max-w-xl space-y-2 text-gray-600">
+              <ul role="list" className="mt-6 max-w-xl space-y-2 text-[var(--color-text-secondary)]">
                 <li className="flex gap-x-3">
                   <span className="mt-1">•</span>
                   <span>
@@ -132,7 +132,7 @@ export default function Informasjonskapsler() {
                 </li>
               </ul>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 Kontroll og reservasjon
               </h2>
               <p className="mt-6">
@@ -147,7 +147,7 @@ export default function Informasjonskapsler() {
                     href="https://tools.google.com/dlpage/gaoptout"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-medium text-indigo-600 hover:text-indigo-500"
+                    className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-brand-hover)]"
                   >
                     Google Analytics Opt-out
                   </a>
@@ -157,23 +157,23 @@ export default function Informasjonskapsler() {
                     href="https://www.facebook.com/help/568137493302217"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-medium text-indigo-600 hover:text-indigo-500"
+                    className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-brand-hover)]"
                   >
                     Facebook Ad Preferences
                   </a>
                 </li>
               </ul>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 Kontakt
               </h2>
               <div className="mt-6">
-                <p className="font-semibold text-gray-900">Iniva AS</p>
+                <p className="font-semibold text-[var(--color-text-primary)]">Iniva AS</p>
                 <p>
                   E-post:{' '}
                   <a
                     href="mailto:hello@iniva.no"
-                    className="font-medium text-indigo-600 hover:text-indigo-500"
+                    className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-brand-hover)]"
                   >
                     hello@iniva.no
                   </a>

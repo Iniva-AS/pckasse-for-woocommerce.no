@@ -21,8 +21,8 @@ export function PartnerContact({
   location,
 }: PartnerContactProps) {
   return (
-    <div className="sticky top-8 rounded-2xl bg-gray-50 p-6 ring-1 ring-gray-200">
-      <h3 className="text-lg font-semibold text-gray-900">Kontakt</h3>
+    <div className="sticky top-24 rounded-2xl bg-white p-6 ring-1 ring-[var(--color-border)]">
+      <h3 className="font-display text-lg text-[var(--color-text-primary)]">Kontakt</h3>
 
       {profileImage && (
         <div className="mt-4">
@@ -42,7 +42,7 @@ export function PartnerContact({
           href={website}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full items-center justify-center gap-2 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500"
+          className="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--color-brand)] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[var(--color-brand-hover)]"
           onClick={() => trackPartnerClick(title, 'website', website)}
         >
           <svg
@@ -64,7 +64,7 @@ export function PartnerContact({
         {/* Email Button */}
         <a
           href={`mailto:${email}`}
-          className="flex w-full items-center justify-center gap-2 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 transition hover:bg-gray-50"
+          className="flex w-full items-center justify-center gap-2 rounded-full bg-white px-3 py-2 text-sm font-semibold text-[var(--color-text-primary)] ring-1 ring-inset ring-[var(--color-border)] transition hover:bg-[var(--color-brand-light)]"
           onClick={() => trackPartnerClick(title, 'email', email)}
         >
           <svg
@@ -86,7 +86,7 @@ export function PartnerContact({
         {/* Phone Button */}
         <a
           href={`tel:${phone}`}
-          className="flex w-full items-center justify-center gap-2 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 transition hover:bg-gray-50"
+          className="flex w-full items-center justify-center gap-2 rounded-full bg-white px-3 py-2 text-sm font-semibold text-[var(--color-text-primary)] ring-1 ring-inset ring-[var(--color-border)] transition hover:bg-[var(--color-brand-light)]"
           onClick={() => trackPartnerClick(title, 'phone', phone)}
         >
           <svg
@@ -107,18 +107,18 @@ export function PartnerContact({
       </div>
 
       {/* Contact Details */}
-      <div className="mt-6 space-y-2 border-t border-gray-200 pt-6 text-sm">
+      <div className="mt-6 space-y-2 border-t border-[var(--color-border)] pt-6 text-sm">
         <div>
-          <dt className="font-medium text-gray-900">E-post</dt>
-          <dd className="mt-1 break-words text-gray-600">{email}</dd>
+          <dt className="font-medium text-[var(--color-text-primary)]">E-post</dt>
+          <dd className="mt-1 break-words text-[var(--color-text-secondary)]">{email}</dd>
         </div>
         <div>
-          <dt className="font-medium text-gray-900">Telefon</dt>
-          <dd className="mt-1 text-gray-600">{phone}</dd>
+          <dt className="font-medium text-[var(--color-text-primary)]">Telefon</dt>
+          <dd className="mt-1 text-[var(--color-text-secondary)]">{phone}</dd>
         </div>
         <div>
-          <dt className="font-medium text-gray-900">Lokasjon</dt>
-          <dd className="mt-1 text-gray-600">{location}</dd>
+          <dt className="font-medium text-[var(--color-text-primary)]">Lokasjon</dt>
+          <dd className="mt-1 text-[var(--color-text-secondary)]">{location}</dd>
         </div>
       </div>
     </div>

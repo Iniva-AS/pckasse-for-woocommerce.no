@@ -6,7 +6,6 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
 import screenshotDashboard from '@/images/screenshots/real-time-dashboard.png'
 import screenshotSetup from '@/images/screenshots/kom-i-gang-på-5-minutter.png'
 import screenshotLogs from '@/images/screenshots/logger-og-feilhåndtering.png'
@@ -63,22 +62,14 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
+      className="relative overflow-hidden bg-[var(--color-brand)] pt-20 pb-28 sm:py-32"
     >
-      <Image
-        className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
-        src={backgroundImage}
-        alt=""
-        width={2245}
-        height={1636}
-        unoptimized
-      />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
             Full innsikt og kontroll med vårt dashboard
           </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
+          <p className="mt-6 text-lg tracking-tight text-white/70">
             En komplett integrasjon som holder produkter, ordre, lager og kunder
             synkronisert mellom PCKasse og WooCommerce. <br />
             Du kan da ha din helt egen skredersydde nettbutikk, som passer
@@ -108,8 +99,8 @@ export function PrimaryFeatures() {
                           className={clsx(
                             'font-display text-lg data-selected:not-data-focus:outline-hidden',
                             selectedIndex === featureIndex
-                              ? 'text-blue-600 lg:text-white'
-                              : 'text-blue-100 hover:text-white lg:text-white',
+                              ? 'text-[var(--color-brand)] lg:text-white'
+                              : 'text-white/70 hover:text-white lg:text-white',
                           )}
                         >
                           <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
@@ -121,7 +112,7 @@ export function PrimaryFeatures() {
                           'mt-2 hidden text-sm lg:block',
                           selectedIndex === featureIndex
                             ? 'text-white'
-                            : 'text-blue-100 group-hover:text-white',
+                            : 'text-white/60 group-hover:text-white',
                         )}
                       >
                         {feature.description}
@@ -139,7 +130,7 @@ export function PrimaryFeatures() {
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-10 w-180 overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-271.25">
+                    <div className="mt-10 w-180 overflow-hidden rounded-xl bg-white shadow-xl shadow-black/20 sm:w-auto lg:mt-0 lg:w-271.25">
                       <Image
                         className="w-full"
                         src={feature.image}

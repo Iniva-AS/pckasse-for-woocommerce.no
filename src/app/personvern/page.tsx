@@ -13,12 +13,12 @@ export default function Personvern() {
     <>
       <Header />
       <main>
-        <div className="bg-white px-6 py-32 lg:px-8">
-          <div className="mx-auto max-w-3xl text-base/7 text-gray-700">
-            <p className="text-base/7 font-semibold text-indigo-600">
+        <div className="px-6 py-32 lg:px-8">
+          <div className="mx-auto max-w-3xl text-base/7 text-[var(--color-text-secondary)]">
+            <p className="text-base/7 font-semibold text-[var(--color-text-secondary)]">
               Personvern
             </p>
-            <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+            <h1 className="mt-2 text-4xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)] sm:text-5xl">
               Personvernerklæring
             </h1>
             <p className="mt-6 text-xl/8">
@@ -27,21 +27,21 @@ export default function Personvern() {
               beskytter personopplysninger i forbindelse med PCKasse for
               WooCommerce.
             </p>
-            <div className="mt-10 max-w-2xl text-gray-600">
+            <div className="mt-10 max-w-2xl text-[var(--color-text-secondary)]">
               <p>
                 Vi følger gjeldende personvernlovgivning (GDPR og norsk
                 personopplysningslov) og behandler kun data som er nødvendige
                 for å levere og forbedre tjenesten.
               </p>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 1. Hvilke data vi samler inn
               </h2>
-              <ul role="list" className="mt-6 max-w-xl space-y-3 text-gray-600">
+              <ul role="list" className="mt-6 max-w-xl space-y-3 text-[var(--color-text-secondary)]">
                 <li className="flex gap-x-3">
                   <span className="mt-1">•</span>
                   <span>
-                    <strong className="font-semibold text-gray-900">
+                    <strong className="font-semibold text-[var(--color-text-primary)]">
                       Kontodata:
                     </strong>{' '}
                     Navn, e-post, organisasjonsnavn og innloggingsinformasjon.
@@ -50,7 +50,7 @@ export default function Personvern() {
                 <li className="flex gap-x-3">
                   <span className="mt-1">•</span>
                   <span>
-                    <strong className="font-semibold text-gray-900">
+                    <strong className="font-semibold text-[var(--color-text-primary)]">
                       Integrasjonsdata:
                     </strong>{' '}
                     Kundedata, ordrer og produkter som synkroniseres mellom
@@ -60,7 +60,7 @@ export default function Personvern() {
                 <li className="flex gap-x-3">
                   <span className="mt-1">•</span>
                   <span>
-                    <strong className="font-semibold text-gray-900">
+                    <strong className="font-semibold text-[var(--color-text-primary)]">
                       Tekniske data:
                     </strong>{' '}
                     IP-adresser, logger og feilmeldinger for drift og sikkerhet.
@@ -69,7 +69,7 @@ export default function Personvern() {
                 <li className="flex gap-x-3">
                   <span className="mt-1">•</span>
                   <span>
-                    <strong className="font-semibold text-gray-900">
+                    <strong className="font-semibold text-[var(--color-text-primary)]">
                       Betalingsdata:
                     </strong>{' '}
                     Håndteres av Stripe (Iniva lagrer ingen kortopplysninger).
@@ -77,11 +77,11 @@ export default function Personvern() {
                 </li>
               </ul>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 2. Formål og behandlingsgrunnlag
               </h2>
               <p className="mt-6">Vi behandler data for å:</p>
-              <ul role="list" className="mt-6 max-w-xl space-y-2 text-gray-600">
+              <ul role="list" className="mt-6 max-w-xl space-y-2 text-[var(--color-text-secondary)]">
                 <li className="flex gap-x-3">
                   <span className="mt-1">•</span>
                   <span>Levere tjenesten (kontraktsgrunnlag)</span>
@@ -107,13 +107,13 @@ export default function Personvern() {
                 </li>
               </ul>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 3. Lagringstid
               </h2>
               <p className="mt-6">
                 Data lagres så lenge du har konto. Når kontoen slettes:
               </p>
-              <ul role="list" className="mt-6 max-w-xl space-y-2 text-gray-600">
+              <ul role="list" className="mt-6 max-w-xl space-y-2 text-[var(--color-text-secondary)]">
                 <li className="flex gap-x-3">
                   <span className="mt-1">•</span>
                   <span>Integrasjoner får soft delete-status i 6 måneder.</span>
@@ -127,75 +127,75 @@ export default function Personvern() {
                 </li>
               </ul>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 4. Deling og underleverandører
               </h2>
               <p className="mt-6">Vi bruker følgende databehandlere:</p>
 
               <div className="mt-8 overflow-hidden rounded-lg border border-gray-200">
                 <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50">
+                  <thead className="bg-[var(--color-brand-light)]">
                     <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-700">
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--color-text-secondary)]">
                         Leverandør
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-700">
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--color-text-secondary)]">
                         Formål
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-700">
+                      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--color-text-secondary)]">
                         Lokasjon
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-gray-200 bg-white">
+                  <tbody className="divide-y divide-gray-200 bg-transparent">
                     <tr>
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                      <td className="px-6 py-4 text-sm font-medium text-[var(--color-text-primary)]">
                         Hetzner Cloud
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Serverhosting
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         EU/Tyskland
                       </td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                      <td className="px-6 py-4 text-sm font-medium text-[var(--color-text-primary)]">
                         Google Cloud
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Backups og medielagring
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">EU</td>
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">EU</td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                      <td className="px-6 py-4 text-sm font-medium text-[var(--color-text-primary)]">
                         Stripe
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Betaling
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         USA (SCC-avtale)
                       </td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                      <td className="px-6 py-4 text-sm font-medium text-[var(--color-text-primary)]">
                         Brevo
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         E-postutsending
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">EU</td>
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">EU</td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                      <td className="px-6 py-4 text-sm font-medium text-[var(--color-text-primary)]">
                         Sentry
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         Feilsporing
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">
+                      <td className="px-6 py-4 text-sm text-[var(--color-text-secondary)]">
                         USA (SCC-avtale)
                       </td>
                     </tr>
@@ -207,7 +207,7 @@ export default function Personvern() {
                 Ingen data selges eller brukes til tredjeparts markedsføring.
               </p>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 5. Dine rettigheter
               </h2>
               <p className="mt-6">
@@ -215,28 +215,28 @@ export default function Personvern() {
                 kontakte oss på{' '}
                 <a
                   href="mailto:hello@iniva.no"
-                  className="font-semibold text-indigo-600 hover:text-indigo-500"
+                  className="font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-brand-hover)]"
                 >
                   hello@iniva.no
                 </a>
                 . Vi svarer innen 30 dager.
               </p>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 6. Informasjonskapsler
               </h2>
               <p className="mt-6">
                 Vi bruker nødvendige cookies for innlogging og valg. Se{' '}
                 <a
                   href="/informasjonskapsler"
-                  className="font-semibold text-indigo-600 hover:text-indigo-500"
+                  className="font-semibold text-[var(--color-text-secondary)] hover:text-[var(--color-brand-hover)]"
                 >
                   vår cookie-erklæring
                 </a>{' '}
                 for detaljer.
               </p>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 7. Sikkerhet
               </h2>
               <p className="mt-6">
@@ -245,17 +245,17 @@ export default function Personvern() {
                 personell.
               </p>
 
-              <h2 className="mt-16 text-3xl font-semibold tracking-tight text-pretty text-gray-900">
+              <h2 className="mt-16 text-3xl font-display font-semibold tracking-tight text-pretty text-[var(--color-text-primary)]">
                 8. Kontakt
               </h2>
               <div className="mt-6">
-                <p className="font-semibold text-gray-900">Iniva AS</p>
+                <p className="font-semibold text-[var(--color-text-primary)]">Iniva AS</p>
                 <p>Færder, Norge</p>
                 <p>
                   E-post:{' '}
                   <a
                     href="mailto:hello@iniva.no"
-                    className="font-medium text-indigo-600 hover:text-indigo-500"
+                    className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-brand-hover)]"
                   >
                     hello@iniva.no
                   </a>

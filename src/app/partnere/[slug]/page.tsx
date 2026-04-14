@@ -73,7 +73,7 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
         elements.push(
           <h2
             key={key++}
-            className="mt-8 text-3xl font-semibold tracking-tight text-gray-900 first:mt-0"
+            className="mt-8 font-display text-3xl tracking-tight text-[var(--color-text-primary)] first:mt-0"
           >
             {line.replace('## ', '')}
           </h2>,
@@ -82,7 +82,7 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
         elements.push(
           <h3
             key={key++}
-            className="mt-6 text-xl font-semibold text-gray-900"
+            className="mt-6 font-display text-xl text-[var(--color-text-primary)]"
           >
             {line.replace('### ', '')}
           </h3>,
@@ -99,7 +99,7 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
         elements.push(
           <ul key={key++} className="mt-4 list-disc space-y-2 pl-6">
             {listItems.map((item, idx) => (
-              <li key={idx} className="text-gray-600">
+              <li key={idx} className="text-[var(--color-text-secondary)]">
                 {parseBoldText(item)}
               </li>
             ))}
@@ -110,7 +110,7 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
         continue
       } else {
         elements.push(
-          <p key={key++} className="mt-4 text-gray-600">
+          <p key={key++} className="mt-4 text-[var(--color-text-secondary)]">
             {parseBoldText(line)}
           </p>,
         )
@@ -123,13 +123,13 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
   return (
     <>
       <Header />
-      <div className="bg-white">
+      <div>
         <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
           {/* Mobile Back Link */}
           <div className="mb-6 sm:hidden">
             <Link
               href="/partnere"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-500"
+              className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-primary)] hover:text-[var(--color-brand-hover)]"
             >
               <svg
                 className="h-5 w-5"
@@ -150,9 +150,9 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
 
           {/* Breadcrumb */}
         <nav className="mb-8 hidden sm:flex" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2 text-sm text-gray-500">
+          <ol className="flex items-center space-x-2 text-sm text-[var(--color-text-muted)]">
             <li>
-              <Link href="/" className="hover:text-gray-700">
+              <Link href="/" className="hover:text-[var(--color-text-primary)]">
                 Hjem
               </Link>
             </li>
@@ -170,7 +170,7 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
               </svg>
             </li>
             <li>
-              <Link href="/partnere" className="hover:text-gray-700">
+              <Link href="/partnere" className="hover:text-[var(--color-text-primary)]">
                 Partnere
               </Link>
             </li>
@@ -187,7 +187,7 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
                 />
               </svg>
             </li>
-            <li className="font-medium text-gray-900">{partner.title}</li>
+            <li className="font-medium text-[var(--color-text-primary)]">{partner.title}</li>
           </ol>
         </nav>
 
@@ -202,13 +202,13 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
                 alt={`${partner.title} logo`}
                 width={96}
                 height={96}
-                className="h-24 w-24 rounded-lg bg-gray-50 object-contain p-2"
+                className="h-24 w-24 rounded-lg bg-[var(--color-brand-light)] object-contain p-2"
               />
               <div>
-                <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                <h1 className="font-display text-4xl tracking-tight text-[var(--color-text-primary)] sm:text-5xl">
                   {partner.title}
                 </h1>
-                <p className="mt-2 text-lg text-gray-600">
+                <p className="mt-2 text-lg text-[var(--color-text-secondary)]">
                   <svg
                     className="mr-1 inline-block h-5 w-5"
                     fill="none"
@@ -234,14 +234,14 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
 
             {/* Services Tags */}
             <div className="mb-8">
-              <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-500">
+              <h2 className="mb-3 text-sm font-medium uppercase tracking-wide text-[var(--color-text-muted)]">
                 Tjenester
               </h2>
               <div className="flex flex-wrap gap-2">
                 {partner.services.map((service) => (
                   <span
                     key={service}
-                    className="inline-flex items-center rounded-md bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10"
+                    className="inline-flex items-center rounded-full bg-[var(--color-brand-light)] px-3 py-1 text-sm font-medium text-[var(--color-text-primary)] ring-1 ring-inset ring-[var(--color-border)]"
                   >
                     {service}
                   </span>
@@ -250,7 +250,7 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
             </div>
 
             {/* Partner Description */}
-            <div className="prose prose-lg max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-h2:text-3xl prose-h3:text-xl prose-p:text-gray-600 prose-ul:text-gray-600">
+            <div className="max-w-none">
               {renderContent(partner.fullDescription)}
             </div>
           </div>
@@ -272,7 +272,7 @@ export default async function PartnerPage({ params }: PartnerPageProps) {
         <div className="mt-16">
           <Link
             href="/partnere"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-500"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-primary)] hover:text-[var(--color-brand-hover)]"
           >
             <svg
               className="h-5 w-5"

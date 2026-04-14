@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-import { Inter, Lexend } from 'next/font/google'
+import { DM_Serif_Display, Funnel_Display } from 'next/font/google'
 import Script from 'next/script'
 import clsx from 'clsx'
 
@@ -14,18 +14,26 @@ export const metadata: Metadata = {
   },
   description:
     'Ta full kontroll over din nettbutikk, og lag den akkurat slik du vil. Vi synkroniserer produkter, ordre, varelager og kunder helt automatisk – så du kan styre alt fra PCKasse.',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: '/favicon-large.png',
+  },
 }
 
-const inter = Inter({
+const funnelDisplay = Funnel_Display({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-funnel-display',
 })
 
-const lexend = Lexend({
+const dmSerifDisplay = DM_Serif_Display({
+  weight: '400',
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-lexend',
+  variable: '--font-dm-serif-display',
 })
 
 export default function RootLayout({
@@ -37,9 +45,9 @@ export default function RootLayout({
     <html
       lang="no"
       className={clsx(
-        'h-full scroll-smooth bg-white antialiased',
-        inter.variable,
-        lexend.variable,
+        'h-full scroll-smooth bg-[var(--color-surface)] antialiased',
+        funnelDisplay.variable,
+        dmSerifDisplay.variable,
       )}
     >
       <head>

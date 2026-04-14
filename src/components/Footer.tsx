@@ -4,45 +4,45 @@ import { DetailedCallToAction } from '@/components/DetailedCallToAction'
 
 export function Footer({ showDetailedCTA = false }: { showDetailedCTA?: boolean }) {
   return (
-    <footer className="bg-white">
+    <footer className="border-t border-[var(--color-border)]">
       {showDetailedCTA && <DetailedCallToAction />}
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
         <nav
           aria-label="Footer"
           className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
         >
-          <Link href="/#features" className="text-gray-600 hover:text-gray-900">
+          <Link href="/#features" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
             Funksjoner
           </Link>
-          <Link href="/#pricing" className="text-gray-600 hover:text-gray-900">
+          <Link href="/#pricing" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
             Priser
           </Link>
-          <Link href="/#faq" className="text-gray-600 hover:text-gray-900">
+          <Link href="/#faq" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
             FAQ
           </Link>
-          <Link href="/kontakt" className="text-gray-600 hover:text-gray-900">
+          <Link href="/kontakt" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
             Kontakt
           </Link>
-          <Link href="https://status.iniva.no/" className="text-gray-600 hover:text-gray-900">
+          <Link href="https://status.iniva.no/" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
             Status
           </Link>
-          <Link href="/personvern" className="text-gray-600 hover:text-gray-900">
+          <Link href="/personvern" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
             Personvern
           </Link>
-          <Link href="/brukerbetingelser" className="text-gray-600 hover:text-gray-900">
+          <Link href="/brukerbetingelser" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
             Brukerbetingelser
           </Link>
-          <Link href="/informasjonskapsler" className="text-gray-600 hover:text-gray-900">
+          <Link href="/informasjonskapsler" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
             Informasjonskapsler
           </Link>
-          <Link href="/databehandleravtale" className="text-gray-600 hover:text-gray-900">
+          <Link href="/databehandleravtale" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
             Databehandleravtale
           </Link>
         </nav>
         <div className="mt-16 flex justify-center gap-x-10">
           <Link
             href="https://x.com/Iniva_as"
-            className="text-gray-600 hover:text-gray-800"
+            className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
           >
             <span className="sr-only">X</span>
             <svg
@@ -56,7 +56,7 @@ export function Footer({ showDetailedCTA = false }: { showDetailedCTA?: boolean 
           </Link>
           <Link
             href="https://www.linkedin.com/company/iniva-no"
-            className="text-gray-600 hover:text-gray-800"
+            className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
           >
             <span className="sr-only">LinkedIn</span>
             <svg
@@ -70,7 +70,7 @@ export function Footer({ showDetailedCTA = false }: { showDetailedCTA?: boolean 
           </Link>
           <Link
             href="https://github.com/Iniva-AS"
-            className="text-gray-600 hover:text-gray-800"
+            className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
           >
             <span className="sr-only">GitHub</span>
             <svg
@@ -87,9 +87,9 @@ export function Footer({ showDetailedCTA = false }: { showDetailedCTA?: boolean 
             </svg>
           </Link>
         </div>
-        <p className="mt-10 text-center text-sm/6 text-gray-600">
+        <p className="mt-10 text-center text-sm/6 text-[var(--color-text-secondary)]">
           &copy; {new Date().getFullYear()} Iniva AS. PCKasse for WooCommerce er
-          et produkt av <a href="https://iniva.no">Iniva</a>.
+          et produkt av <a href="https://iniva.no" className="hover:text-[var(--color-text-primary)]">Iniva</a>.
         </p>
       </div>
     </footer>

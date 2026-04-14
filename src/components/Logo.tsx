@@ -1,15 +1,10 @@
-import Image from 'next/image'
-
-export function Logo(props: React.ComponentPropsWithoutRef<'div'>) {
+export function Logo(props: React.ComponentPropsWithoutRef<'span'>) {
   return (
-    <div {...props}>
-      <Image
-        src="/PCKasse for WooCommerce logo.svg"
-        alt="PCKasse for WooCommerce"
-        width={200}
-        height={50}
-        className="h-10 w-auto"
-      />
-    </div>
+    <span
+      {...props}
+      className="font-display text-2xl tracking-tight text-[var(--color-text-primary)]"
+    >
+      PCKasse for WooCommerce
+    </span>
   )
 }

@@ -87,10 +87,10 @@ export function Testimonials() {
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="font-display text-3xl tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
             Loved by businesses worldwide.
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
+          <p className="mt-4 text-lg tracking-tight text-[var(--color-text-secondary)]">
             Our software is so simple that people can’t help but fall in love
             with it. Simplicity is easy when you just skip tons of
             mission-critical features.
@@ -108,16 +108,16 @@ export function Testimonials() {
                     <figure className="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
                       <QuoteIcon className="absolute top-6 left-6 fill-slate-100" />
                       <blockquote className="relative">
-                        <p className="text-lg tracking-tight text-slate-900">
+                        <p className="text-lg tracking-tight text-[var(--color-text-primary)]">
                           {testimonial.content}
                         </p>
                       </blockquote>
                       <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
                         <div>
-                          <div className="font-display text-base text-slate-900">
+                          <div className="font-display text-base text-[var(--color-text-primary)]">
                             {testimonial.author.name}
                           </div>
-                          <div className="mt-1 text-sm text-slate-500">
+                          <div className="mt-1 text-sm text-[var(--color-text-muted)]">
                             {testimonial.author.role}
                           </div>
                         </div>

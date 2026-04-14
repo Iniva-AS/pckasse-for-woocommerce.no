@@ -66,7 +66,7 @@ const features: Array<Feature> = [
               gradientUnits="userSpaceOnUse"
             >
               <stop offset=".194" stopColor="#fff" />
-              <stop offset={1} stopColor="#6692F1" />
+              <stop offset={1} stopColor="#999" />
             </linearGradient>
           </defs>
           <path
@@ -121,7 +121,7 @@ function Feature({
       <div
         className={clsx(
           'w-9 rounded-lg',
-          isActive ? 'bg-blue-600' : 'bg-slate-500',
+          isActive ? 'bg-[var(--color-brand)]' : 'bg-[var(--color-text-muted)]',
         )}
       >
         <svg aria-hidden="true" className="h-9 w-9" fill="none">
@@ -131,15 +131,15 @@ function Feature({
       <h3
         className={clsx(
           'mt-6 text-sm font-medium',
-          isActive ? 'text-blue-600' : 'text-slate-600',
+          isActive ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-text-secondary)]',
         )}
       >
         {feature.name}
       </h3>
-      <p className="mt-2 font-display text-xl text-slate-900">
+      <p className="mt-2 font-display text-xl text-[var(--color-text-primary)]">
         {feature.summary}
       </p>
-      <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
+      <p className="mt-4 text-sm text-[var(--color-text-secondary)]">{feature.description}</p>
     </div>
   )
 }
@@ -151,8 +151,8 @@ function FeaturesMobile() {
         <div key={feature.summary}>
           <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
           <div className="relative mt-10 pb-10">
-            <div className="absolute -inset-x-4 top-8 bottom-0 bg-slate-200 sm:-inset-x-6" />
-            <div className="relative mx-auto h-[400px] w-211 overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
+            <div className="absolute -inset-x-4 top-8 bottom-0 bg-[var(--color-border)] sm:-inset-x-6" />
+            <div className="relative mx-auto h-[400px] w-211 overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-black/5 ring-[var(--color-border)]">
               <Image
                 className="h-full w-full object-cover object-top"
                 src={feature.image}
@@ -190,7 +190,7 @@ function FeaturesDesktop() {
               />
             ))}
           </TabList>
-          <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-slate-200 px-14 py-16 xl:px-16">
+          <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-[var(--color-border)] px-14 py-16 xl:px-16">
             <div className="-mx-5 flex">
               {features.map((feature, featureIndex) => (
                 <TabPanel
@@ -203,7 +203,7 @@ function FeaturesDesktop() {
                   style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
                   aria-hidden={featureIndex !== selectedIndex}
                 >
-                  <div className="h-[400px] w-211 overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-slate-900/5 ring-slate-500/10">
+                  <div className="h-[400px] w-211 overflow-hidden rounded-xl bg-white shadow-lg ring-1 shadow-black/5 ring-[var(--color-border)]">
                     <Image
                       className="h-full w-full object-cover object-top"
                       src={feature.image}
@@ -214,7 +214,7 @@ function FeaturesDesktop() {
                 </TabPanel>
               ))}
             </div>
-            <div className="pointer-events-none absolute inset-0 rounded-4xl ring-1 ring-slate-900/10 ring-inset" />
+            <div className="pointer-events-none absolute inset-0 rounded-4xl ring-1 ring-[var(--color-border)] ring-inset" />
           </TabPanels>
         </>
       )}
@@ -231,10 +231,10 @@ export function SecondaryFeatures() {
     >
       <Container>
         <div className="mx-auto max-w-4xl md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="font-display text-3xl tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
             Ta kontroll over din egen nettbutikk
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
+          <p className="mt-4 text-lg tracking-tight text-[var(--color-text-secondary)]">
             PCKasse sin innebygde butikkløsning gir deg lite fleksibilitet. Med
             denne integrasjonen kan du beholde PCKasse som kassesystem –
             samtidig som du får en fullverdig WooCommerce‑butikk skreddersydd
