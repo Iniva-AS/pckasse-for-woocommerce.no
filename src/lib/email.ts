@@ -1,6 +1,6 @@
-import * as Brevo from '@getbrevo/brevo'
+import { BrevoClient } from '@getbrevo/brevo'
 
-let apiInstance: Brevo.TransactionalEmailsApi | null = null
+let brevoClient: BrevoClient | null = null
 
 /**
  * Escapes HTML special characters to prevent XSS attacks
@@ -29,23 +29,21 @@ function sanitizeEmailSubject(subject: string): string {
     .substring(0, 255) // Limit subject length
 }
 
-function initBrevo(): Brevo.TransactionalEmailsApi | null {
+function initBrevo(): BrevoClient | null {
   if (!process.env.BREVO_API_KEY) {
     console.warn('BREVO_API_KEY not set, emails will not be sent')
     return null
   }
 
-  if (apiInstance) {
-    return apiInstance
+  if (brevoClient) {
+    return brevoClient
   }
 
-  apiInstance = new Brevo.TransactionalEmailsApi()
-  apiInstance.setApiKey(
-    Brevo.TransactionalEmailsApiApiKeys.apiKey,
-    process.env.BREVO_API_KEY,
-  )
+  brevoClient = new BrevoClient({
+    apiKey: process.env.BREVO_API_KEY,
+  })
 
-  return apiInstance
+  return brevoClient
 }
 
 export interface ContactFormData {
@@ -59,9 +57,9 @@ export interface ContactFormData {
 export async function sendContactFormEmail(
   formData: ContactFormData,
 ): Promise<void> {
-  const api = initBrevo()
+  const brevo = initBrevo()
 
-  if (!api) {
+  if (!brevo) {
     throw new Error('Brevo API not initialized - check BREVO_API_KEY')
   }
 
@@ -173,24 +171,22 @@ export async function sendContactFormEmail(
     </html>
   `
 
-  const sendSmtpEmail: Brevo.SendSmtpEmail = {
-    sender: {
-      email: fromEmail,
-      name: 'PCKasse for WooCommerce',
-    },
-    to: [
-      {
-        email: contactEmail,
-      },
-    ],
-    subject: sanitizeEmailSubject(
-      `Kontaktskjema: ${formData.firstName} ${formData.lastName}`,
-    ),
-    htmlContent,
-  }
-
   try {
-    await api.sendTransacEmail(sendSmtpEmail)
+    await brevo.transactionalEmails.sendTransacEmail({
+      sender: {
+        email: fromEmail,
+        name: 'PCKasse for WooCommerce',
+      },
+      to: [
+        {
+          email: contactEmail,
+        },
+      ],
+      subject: sanitizeEmailSubject(
+        `Kontaktskjema: ${formData.firstName} ${formData.lastName}`,
+      ),
+      htmlContent,
+    })
     console.log('Contact form email sent successfully')
   } catch (error) {
     console.error('Error sending contact form email:', error)
